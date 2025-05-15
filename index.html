@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VehicleWale - Buy Bikes, Cars, Lorries, and Buses</title>
+   <link rel="stylesheet" href="indexstyle.css" />
+  
+</head>
+<body>
+  <header>
+    <div class="logo">VehicleWale</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="filter.html">Filter</a>
+      <a href="contact.html">Contact</a>
+      <a href="buy.html">Buy</a>
+    </nav>
+    <button onclick="toggleDarkMode()" id="darkToggle">🌙 Dark Mode</button>
+  </header>
+
+  <section class="hero">
+  
+    <iframe class="video-background" src="https://www.youtube.com/embed/wCClrZMfj54?si=t3DIzuMIgZ6kuHoa&controls=0&autoplay=1&mute=1&loop=1&playlist=wCClrZMfj54"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <div class="overlay">
+      <h1>Find Your Dream Vehicle Today</h1>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <input type="text" id="searchInput" placeholder="Search vehicles..." />
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="bike">Bikes</option>
+      <option value="car">Cars</option>
+      <option value="truck">Trucks</option>
+      <option value="bus">Buses</option>
+    </select>
+    <button onclick="performSearch()">Search</button>
+  </section>
+
+  <section class="categories">
+    <div class="category"><a href="bikebrand.html">
+      <img src="https://cdn.pixabay.com/photo/2014/04/03/09/59/motorcycle-309527_1280.png" alt="Bike" /></a>
+      <h3>Bikes</h3>
+    </div>
+    <div class="category">
+      
+      <a href="carbrand.html"><img src="https://static.vecteezy.com/system/resources/previews/000/550/435/non_2x/stylized-convertible-sports-car-vector.jpg" alt="Car" /></a>
+
+      <h3>Cars</h3>
+    </div>
+    <div class="category"><a href="truck.html">
+      <img src="https://static.vecteezy.com/system/resources/previews/015/400/367/large_2x/lorry-for-transportation-of-goods-and-construction-materials-heavy-volume-and-weight-delivery-when-ordering-goods-cargo-truck-illustration-isolated-on-white-background-vector.jpg" alt="Lorry" />
+     </a> <h3>Trucks</h3>
+    </div>
+    <div class="category"><a href="bus.html">
+      <img src="https://pluspng.com/img-png/bus-png-side-view-download-image-see-more-images-tags-car-side-view-2400.png" alt="Bus" /></a>
+      <h3>Buses</h3>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div><h2 id="vehicles">0</h2><p>Total Vehicles</p></div>
+    <div><h2 id="users">0</h2><p>Happy Users</p></div>
+  </section>
+
+  <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">⬆</button>
+
+  <footer>
+    &copy; 2025 VehicleWale. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    window.onscroll = () => {
+      document.getElementById("scrollBtn").style.display =
+        document.documentElement.scrollTop > 200 ? "block" : "none";
+    };
+
+    function performSearch() {
+      const search = document.getElementById("searchInput").value.toLowerCase();
+      const filter = document.getElementById("categoryFilter").value;
+      const cards = document.querySelectorAll(".category");
+
+      cards.forEach(card => {
+        const title = card.querySelector("h3").innerText.toLowerCase();
+        const showByText = title.includes(search);
+        const showByCategory = !filter || title.includes(filter);
+        card.style.display = showByText && showByCategory ? "block" : "none";
+      });
+    }
+
+   
+    function updateStats() {
+      let vehiclesCount = 100;  
+      let usersCount = 5000;   
+
+      
+      animateCount("vehicles", vehiclesCount);
+
+ 
+      animateCount("users", usersCount);
+    }
+
+   
+    function animateCount(id, targetValue) {
+      let currentValue = 0;
+      let interval = setInterval(function() {
+        document.getElementById(id).innerText = currentValue;
+        if (currentValue === targetValue) {
+          clearInterval(interval);
+        } else {
+          currentValue += Math.ceil(targetValue / 100);
+        }
+      }, 30);
+    }
+
+    
+    updateStats();
+  </script>
+</body>
+</html>

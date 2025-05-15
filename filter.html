@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VehicleWale - Vehicle Brands</title>
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Header with logo and nav */
+    header {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      gap: 15px;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #ffcc00;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Title section below header */
+    .page-title {
+      text-align: center;
+      background: #343a40;
+      color: white;
+      padding: 40px 20px 30px;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      user-select: none;
+    }
+
+    /* Filters container */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 25px 15px 40px;
+      flex-wrap: wrap;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-radius: 12px;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    /* Search input */
+    #brandSearch {
+      padding: 14px 20px;
+      font-size: 18px;
+      width: 280px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    #brandSearch:focus {
+      border-color: #343a40;
+      outline: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Dropdown */
+    #typeFilter {
+      padding: 14px 20px;
+      font-size: 18px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      min-width: 180px;
+    }
+    #typeFilter:focus {
+      border-color: #343a40;
+      outline: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Main grid of brand cards */
+    main {
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      padding: 0 20px 60px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .brand-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: default;
+      user-select: none;
+    }
+    .brand-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+    .brand-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .brand-card h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e1e2f;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #343a40;
+      color: white;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .filters {
+        flex-direction: column;
+        max-width: 320px;
+        margin-bottom: 30px;
+      }
+      #brandSearch, #typeFilter {
+        width: 100%;
+      }
+      header {
+        justify-content: center;
+        gap: 10px;
+      }
+      nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">VehicleWale</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="filter.html">Filter</a>
+      <a href="contact.html">Contact</a>
+      <a href="buy.html">Buy</a>
+    </nav>
+  </header>
+
+  <section class="page-title">Explore Top Vehicle Brands in India</section>
+
+  <section class="filters">
+    <input
+      type="text"
+      id="brandSearch"
+      placeholder="Search by brand or type (e.g., Honda, Truck)"
+      onkeyup="filterBrands()"
+      aria-label="Search brands or types"
+    />
+    <select id="typeFilter" onchange="filterBrands()" aria-label="Filter by vehicle type">
+      <option value="">All Types</option>
+      <option value="Car">Car</option>
+      <option value="Bike">Bike</option>
+      <option value="Bus">Bus</option>
+      <option value="Truck">Truck</option>
+    </select>
+  </section>
+
+  <main id="brandsContainer">
+    <div class="brand-card" data-name="Honda" data-type="Car">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_logo.svg" alt="Honda" />
+      <h2>Honda (Car)</h2>
+    </div>
+    <div class="brand-card" data-name="Hyundai" data-type="Car">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Hyundai_logo.svg" alt="Hyundai" />
+      <h2>Hyundai (Car)</h2>
+    </div>
+
+    <div class="brand-card" data-name="TVS" data-type="Bike">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/TVS_Motor_Company_logo.png" alt="TVS" />
+      <h2>TVS (Bike)</h2>
+    </div>
+    <div class="brand-card" data-name="Bajaj" data-type="Bike">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Bajaj_auto_logo.svg" alt="Bajaj" />
+      <h2>Bajaj (Bike)</h2>
+    </div>
+
+    <div class="brand-card" data-name="Volvo" data-type="Bus">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Volvo-Iron-Mark-Black.svg" alt="Volvo" />
+      <h2>Volvo (Bus)</h2>
+    </div>
+    <div class="brand-card" data-name="Ashok Leyland" data-type="Bus">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Ashok_Leyland_logo.svg" alt="Ashok Leyland" />
+      <h2>Ashok Leyland (Bus)</h2>
+    </div>
+
+    <div class="brand-card" data-name="Tata" data-type="Truck">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Tata_Motors_Logo.svg" alt="Tata" />
+      <h2>Tata (Truck)</h2>
+    </div>
+    <div class="brand-card" data-name="Mahindra" data-type="Truck">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Mahindra_&_Mahindra_logo.svg" alt="Mahindra" />
+      <h2>Mahindra (Truck)</h2>
+    </div>
+     <div class="brand-card" data-name="Ashok Leyland" data-type="Bus">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Ashok_Leyland_logo.svg" alt="Ashok Leyland" />
+      <h2>Ashok Leyland (Bus)</h2>
+    </div>
+     <div class="brand-card" data-name="Ashok Leyland" data-type="Bus">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Ashok_Leyland_logo.svg" alt="Ashok Leyland" />
+      <h2>Ashok Leyland (Bus)</h2>
+    </div>
+   
+  </main>
+
+  <footer>
+    <p>&copy; 2025 VehicleWale. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterBrands() {
+      const searchInput = document.getElementById("brandSearch").value.toLowerCase();
+      const typeFilter = document.getElementById("typeFilter").value;
+      const cards = document.querySelectorAll(".brand-card");
+
+      cards.forEach((card) => {
+        const brandName = card.getAttribute("data-name").toLowerCase();
+        const vehicleType = card.getAttribute("data-type");
+
+        const matchesSearch =
+          brandName.includes(searchInput) ||
+          vehicleType.toLowerCase().includes(searchInput);
+
+        const matchesType = !typeFilter || vehicleType === typeFilter;
+
+        if (matchesSearch && matchesType) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
