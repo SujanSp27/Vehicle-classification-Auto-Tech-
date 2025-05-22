@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KTM 250 Duke</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #111;
+            color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ebe4e4;
+            color: #0b0b0b;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 32px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .bike-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .styled-list {
+            padding-left: 25px;
+            border-left: 4px solid #ff5c00;
+        }
+
+        .styled-list li {
+            position: relative;
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+
+        .styled-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: #ff5c00;
+            border-radius: 50%;
+        }
+
+        .btn {
+            background-color: #ff5c00;
+            color: #fff;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #features {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>KTM 250 Duke</h1> <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/ktm-duke-250-standard1728459958743.jpg?q=80" alt="KTM 250 Duke" class="bike-image" />
+        <p><strong>Engine:</strong> 249cc, Single-cylinder, Liquid-cooled</p>
+        <p><strong>Power:</strong> 30 PS @ 9,500 rpm</p>
+        <p><strong>Torque:</strong> 25 Nm @ 7,500 rpm</p> <button class="btn" onclick="toggleFeatures()">Show/Hide
+            Features</button>
+        <div id="features">
+            <ul class="styled-list">
+                <li>LED Headlamp</li>
+                <li>Quickshifter (Up only)</li>
+                <li>Supermoto ABS</li>
+                <li>TFT Console</li>
+                <li>WP Upside-down Front Fork</li>
+            </ul>
+        </div>
+        <p><strong>Price:</strong> ₹2.28 lakh (ex-showroom, India)</p>
+    </div>
+    <script> function toggleFeatures() { const features = document.getElementById('features'); features.style.display = features.style.display === 'none' ? 'block' : 'none'; } </script>
+</body>
+
+</html>
