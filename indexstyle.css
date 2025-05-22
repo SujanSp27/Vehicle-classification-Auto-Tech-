@@ -527,35 +527,3 @@ footer {
     font-size: 1rem;
   }
 }
-.brand-card {
-    width: 250px;
-    height: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    background-color: #fff;
-    transition: transform 0.3s ease;
-}
-
-.brand-card:hover {
-    transform: translateY(-5px);
-}
-
-.brand-logo {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    display: block;
-}
-
-.brand-name {
-    font-size: 1.2rem;
-    margin: 10px 0 5px;
-}
-
-.brand-models {
-    font-size: 0.9rem;
-    color: #777;
-}
-

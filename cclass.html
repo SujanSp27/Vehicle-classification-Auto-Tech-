@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mercedes-Benz C-Class Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+
+    .container {
+      background: #ebe4e4;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #0b0b0b;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .car-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      filter: grayscale(10%) brightness(90%);
+    }
+
+    p {
+      color: #0c0101;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .styled-list {
+      padding-left: 25px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-left: 4px solid #e81515;
+    }
+
+    .styled-list li {
+      color: #0c0101;
+      font-size: 17px;
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .styled-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background-color: #e81515;
+      border-radius: 50%;
+    }
+
+    .btn {
+      background-color: #e81515;
+      color: #efe8e8;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #features {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Mercedes-Benz C-Class</h1>
+
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEBUQExMWFRUXFhYVGBUYFxYVGBgZFhUXFxYVFxkYHSggHR8lGxUVIjEhJSotLi4uFx8zODMtNygtLisBCgoKDg0OFxAQFS0aHR0tLS0rLS0tLSstKystKy0rLS0tLS0rLS0tKy0tLS0tKzg4LSstKystKy0tLy0tLS4rLv/AABEIAKgBKwMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgIDBAUHAQj/xABFEAACAQIDBAcEBggFAwUAAAABAgADEQQSIQUGMUEHEyJRYXGRMoGhsSNCUmKSwRRDcoKistHwFzNTwuEk0vEVFkRjg//EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABwRAQEBAAIDAQAAAAAAAAAAAAABEQJBEiExE//aAAwDAQACEQMRAD8A7jERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBETy8D2IiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiW69dUXMxAHeYFyYW0trUaClqjhbC51+fd75Et7t+VoU7rcXuFH13I42+yBcXPLz0nJ8bisTjXBdtC6Kq3simowUE342uSSdbA90uI6RtbpXpKSMPTNT7x0X1a3wvNA/SRtGofo6a+QDP8AyKJp6G0MBhahQYY4pkJU1KjhVOU2JRMrC2mhMn2yN58JUoCr1iURqCjuiFSDbhfhwIPjNYzeVnSG4zfvadMBqqZQTYXSslz3AsZ5Q6R8Ta7IbeFQj4EfnNd0nbcSviKdOk6vTppfMrBlLvq1iNDYBB6zSYPGPQqLUp2zLoCVVgNONmBF4WX06Jgeka+jPkPLrEUp+JLH3kgTfDfdEF66imOVQXem3hoLqediLHkTOS08V1xPWAFjrmAsT3k+N9Zl4HFmgRSq9qhUB0OuUXILAd1wbj3jXixddLHSLgz7LO/7NCu3+ye/4g0eVDEHyoMP5rSObJqUadVKdZUZDTKqzAOD1QLqdQQGyZw3I5KZHEgQ3aO8laq5KhadO/ZprTpgAcr9ntG3En4cIxnbrp1fpOoIbNQxA81Rfm8pTpRwp/VVx+8o+TyGNsjE4zDUqtOnQGVWFTKlOm7urNr2V5oU0BAJvpwkYoC4LXOluHGx5iTFldsob8K2qirr9sUXFvDI6n3kmbGhvtRB+nVqS/6ts1IcfbYa0+HFgF1HavNDu9sTCrhlC3rI9nzVLE9ofVA9j3a6akyp938hz0G/cY/yt+R9Yxn9I6HTqBgGUggi4INwQeBBHGVTmOCarh2JwrdS/F8O4PUOSbklB/lsdfpKfG9yHkt3f3spYh+odTQxIFzQci5H26TjSqn3l94HCSxuXUhiIkUiIgIiICIiAiIgIiICIiAiIgIiICeOwAJPAT2Q7e6rVq1hhQ2SlkVmIPaY5iSo9wXXl430LJrZ4zeIDSmt/E/0kexmOeo2Zzf4AeQntXD66sB56X9eMtNs17XAGpA0056f34zcZcz3gw+KrYl6zUKuW+VOyTZFvl4d/tebGYmNzqwtTdVU3GZGXlYcR3EzolXaVFGam7sKqkjq8jFtOYBAuOfZvpM5abjinwsYHHWe55TIpUXK24A66zq9TD029ukD56/OYlXd7BNxpAeIVR8gD8YHHQbv7x8/6TLqNOjNuJhGAKkoeOhYWPvLfKYOJ6PG/V1b+eU/9sCJ7KwbVSQqliLaC+l76k8Bw5903uJ2LimoIppqzU81gGGchtSuhsdRcc7375kVdmbRwtIUaWGWouYsai9liT9vMwB0sBa/CYS7xbQo6tg2Nu4k/wAoaBY2LjUqIcJW0B9g8CPAeI1sO644WB1lXZj06hQ2JHA8iDwYef8Aeomq21tXr8TUxGlJmbP1YPsNYFrXANywLcOfhJjs8nF4dHPZYAgPa/aGjDjqpI4ctIG23f3uw+ForQZKlwSxbs6lje4HdwHHlIbi69MYl2p36pmYgG1wrG+U27r290243ZxFbS9BbG1zVdfh1R5WM2+A6N6vE1qP8dUfyrDM44yNx946dGk+HrPlCHMh1NwdSoAB52I/aMkNLe+iRnKstPm5amSPvFA2a3iLzW4fo9I44mj7sKTp3XarM1Oj+nxOJb9ylRT5q0al4SpFWpU6qjNYj6rA6jxVh/4ke3h2dTyolftIW+jqqSlSm4FwVZdVawuCONjccpdTcXDj2q2IPuo2/gpXmcm6uFdBS/SKpUG4TrCLG5NwrErzP1ecaThZ21ez9+MRgHWltA9dhWIWnjlXVe5cQq8/vDj626ZhMSlVFq02V0YBldSGVgeBBHGRZd0cH1bUnWpURhZleq5DDxAIHwmbsTYeGwgK4ZOqU8VDOVv35WYi/jxma3EhiYYxDjkD5aH4yr9OX6wK+Y09ZFZUShKqngQZXAREQEREBERAREQEREBERATnu0cX1mJepyvYeQ0B+E6FIJiMIMx5G5+c1Bl4bEaamV4TaNCrmVKqMRxKsr5TyJyk2se+ca6UduVXxA2bRYqiqGrWNgzMM1m+6qkG3C514CajD7p4vDKuLRa9IrZhVAtlvzYXuqn7wsb+MI+iBihYH4d3ePW8DEL4SE7m7yfpdE5wFrIclVRwzW7NRRyV1B05FGHiZDngbX6M8hLOJwdMqdOII9dJhCpFStZTrAwtv7DxDMHwxosLWNOqaiczqrJca31DKRpK9l7GxCoetane/ZFPgFtw4AceQHzmeMQZcGLMoxWwdVeBmLi6LMCtSmrg8Qyhh6ETbDGT39JBgQ2puxgC2Y4VFP3bgfh9n4S5htiUFUrSPVjMezlFu7la3CSxsh5TFp4RCvvY+rsfzjRHKmx3GqlT5Hj5g2lkpUTiGXx1+ekkzbP7jMfEYVwJdGtw+1qo/WHybX+abCltp/rIp8rqfhp8JpcWtjMTrCOBt5RgmFPa1M8Q6ejD8j8JdL03+sjeB7J9GtIam0CONj56fEf0mVSx6Hjp5/keHu4xgkpR09lnTw1K+h0labUqr7Shx3r2W9OHymnw+IcDssQPDh6cJkLiWPFQfEdk/DT4SYN5Q2oraA2P2W7J93I+4y+MfyMjxAPL1laVtLAkj8Xykwb8VKZ+6e8af8H3y/Tq1F4NmHof6H4SPKW7j8Jk0DVHD01I/KMEjo4u/Ef35TJSoDwMjlHE1bkMpWx0JAsw7wQ3zAmQMQ39g/1kxW9iYuDxObQ8R8RMqQIiICIiAiIgIiICRbbGHHXNY2bRiPBr2JHdcML+ElMwdp7Kp1gC11db5ai6Mt+I7iDzU3BsNNJYPnjd2mtXbGLxGIsFp1q1Rr6BRSewBPcCaZ/cknw20q4vhUqM9XTDK7drMq1W/wCoYNo/0NSkWOoJuOcyNtbGrYHadRqKpUfE0zUUE9WubPSWqTe9tFLkanUiaXDYapkNHItRjUZTSw7mhSYguTTQkqQt6bJpYXDadkyjHpWwO2hTQ2o1rUxrcWez0fwvkW/dm7506nWUgTjHSDiFL0XpI1ELQQLTIyNTNN6gCFeTLZRbwnUNmYpqlJKgAOdFfsuje2oa1gc2l7cOUQbxQDwIlGKpEIx+63yM1r1wNGupPAOCh9HAMrbEMFIBPA+XDulRsGUyi5lpNonmAfhLgxiHiCPjA9zx1k9BQ8GHy+c8alA9DyjDVDlGvKU5TLOHJyr5CBtMPVN5pN+N+MPgKYDjPVYEpSHFraXJ4Kt9Lm/OwNjM/rwql2NgoJJ7gBcn0nz3jcQ+OxNXGViQhbQX4D6lMeAW39mSiR1ulzaDMerpUFW/shGbTuJLcfK0ztndIVKuRTxdFaDnQVqdwl/vqbkDxu3u4zE2VujVqrclKK2BCkZns1wrGncEA2NiSL2l3Gbhvl7FWlVPCwXIbjitw7drhobR7VutpYd7FRUK3F1dbEEciP8AgyMYbFYjDVTc0sx0z16dOsrcNM1VTlB8SAPC8yt2cS9NjgK17C/VZtGRhq1M+BGotp+ITa4zDhlKsAR3Ga+ov4RqgqotXD7LBqJnzim+GcajQtRcWa5Gk2dXGpSbq7YimbnWhi/0m9rXOTFo4A1H1uRkWwWwKBawungApX0sD8ZJcLu1Ua1sXw4ZqOb3X63Xu1vppwkwZ+zdttiG6qhiEqNa5pYjDVKLkDQg1qDNTGpAPY75f2Hv7SqZ+sohOrDFyGzoAgJYhwouLA8LzWUtwGU1HOLqsKhzOqL1Qc3Js1nII7R0tzmFjdi5adSiqaMtstymcBgzUw3IsAVzfevrAs7R6bXuf0bCUlHJqrO5PmqZQPLMZpcV0v7Ta9no0/2KI/3lpp12js5TY7JYkEgh8XW0INiCAg1vymTS3owaHs7Hw1x9t6lT+YTKpDU2tj2pXxO066VWpdf1dOmgWnTLqgaqVyni1yFuQFbjoDD6lPa1Wo1L/q6rBmU9utUW4NjrfLb4SZJikxDHGrQNX9Iofo9SmpKU8OP1qllHZY6FWawADN2tcsa2rvVjHf8AR6WLqigpFOktM2ZlQBVN07bZrXtfnw5Sic9DIxuDxrYTFKyLWpNURWdGKlGRScqsSt8442vl852+fP8AuNgf/TadXaOMvSNQLTRW1qtrnbs8cxsuh4BSWInesFWz0kqfaVW/EAfzkovRESBERAREQE8vPYtApLS1UxAEulZQ1KBz7pMqZko4qmD1mGdn86bi1VfQKb8gCZD6W0sHm6wVFp0xTpZVDfSq1Oq1QrlNyb31OoOZtdbzsuJ2ajixE51tzoeo1GZqGJqUM2uQqtRAfAAqR5XllHHN7dsHEV3qm/aPAm9gAAB7gAPOY2x9vVaKZQxsDovK3P4zoeK6DMRyxiHzpMv+4zXV+hXGrwrU28gRGjF2f0jsmhaovkbr7xf8puMJv7hm4ml43U0T+JMp+MjeM6Lccn1c3lNJi90cXT4029I0dYwm8OHcdkm3LK61FHuIzH3tM2ntGmeFRf3g9M+4AOPUicGq7MqrxUj3Sulj8TT4VHHhckehl8h39KpPAE/slah9KZY+sqTGANlzWb7N7N+HjOGUN6sWvFlb9pf+203WF6Ra4GR1JXmM2ZfwOCJdiOxLi2/8zzD4jsKLfVX5Cc1wfSHQPtLl/dZB6Ujb1E3mB3uwzWC1fcSj2HcAMh9SYG83wxFtn4kj/RqD1Uj85zzcXZa1K1NGt1dKn1r34FiRYH95gfEKRzkr3i2mlTBYhQym9GpYdoMTlNtCtv4pH9wdpJSbEVGBYGjSay2JyhwhIuRoDUUnwiq3eKqqtZNq4VuuplTTrKhZs6EaGwBIdWVbXA9kA2AvKnxppo9GgivVr4x0VlNkXrcjCpVYC6nq/C4sO6W3PWP14wr4ZWDIz3NKrlJHbXL2dSAANSTbvlL1GtVrM2IJyNXIoqEdqdUCnlNTJ2HDNTITUiw4gAyCnebYApYdKtMsWw4BDsSSyq2bW5OinUA3sFI5mZL0w4DrwZQw8mF/zjY9LAnD1moMSatNuu6x3NQ5UYEMKnHLdtVuOMp3XqZ8HSJ4gMv4XZR8AJYiwKZU3l+pvLSw/tt2vsKMze8cB7yJRvS1RMOWpHKbgM9r5F1u4+AvyvflObVUKm1ied+N7/WvzvxvLaOlDpWCiy4dj+0VHyJlv/EXD1jlrU3p/eADD4HN8Jzbr7C5X4L+ayRbt7p1cU4NQmjT8gahHgLADzb0MyqV4yhsrEfS1HpE/bWtka/3srAnkO0LzDwe6+zq4Y0TVZUbJmFbs3yKxynKbgBwPMGY+2MLuzhTkY18XUGjBWLWPcXU00/DearY2/OFwy1UpYaoEas9REzKAqsqAKTrr2TGiSpuNgxcHrLHiDUNjzscoGnP+k3+ytmUcOt8PTRTbkouxHAM73c6/e5znmK6T6h/y8LTU/8A2O1T4Lklmlt3bWMOSgjgMCAKNLKD5ORf+KNG42tg9oVto0kxtBjUqALRpqL0lBZQQpzWygkZmJPEXB0E+jKFIKqoOCgKOHIW5aThfR3uRtuhikr1LJTzXdKtTNe+mYcbOASQy37joTO7Lw1ko9iIkCIiAiIgIiICIiAi0RApKCUmiJciBjNhh3TGrbMRuKg+6bKeWgRnGbp4Z+NNfSR7aHRlhH4LadHyzwoIHEto9EK/UaRjaHRViV9kXn0kaIltsMIHydjdysVT40z6TTV9kVV4ofSfYVXZynioM1WM3Ww7+1TX0gfJ1OpWp+yzr5EibzdTbLUKtOta+QlXUWGam3tAeI0I8VE7ltLo0wz8FtIhtXoqZbtTze6BuOqGJqUsQtQNh1UtTVfr1TdQ7nuRSwy8QxN+E0+x0z0P0mkCXpYmuMub2wLIRryKlTrwtIZUxGN2bUK3amCdQV+jfxKsLA25jXTjKqW/lZEKU+opgkn6OmQbmwLDO7LfQcRymtEu30ahQRiAOuqoyAX4I9hUYi9tQMgJ11NtAbR7d3eGnToCkXCsGckEfaYkEa91vfeQ/aO12qMWZizE3JJuT5/05eU1jEk3jR1X/wByr/qr6f8AEt4etshjesqC+pKUyP5Rb4TmDKxN56KDdxjyHX02ru5R7SgBxwbqqjsPLNw8xItt/falVDUKXW06J0LLlWpU7wSScqnuFyeemkhi4Ru6X6ezXP1TJoqWvhR+oqt+1XW3h7NIH4yunjVv2MNRH7XWVD/G5HwmTh9gVW4KfSbzAbm12+oZBI+jbbmDpMOuwlMudDVJRVH/AOaUQPXMfGduwO8GDewp1U8OKj4gTjuxujuu1jlP9+Mnmxdwyli7AfE/0gTsG+s9mPgsItJMi3tx11mRAREQEREBERAREQEREBERAREQEREBERAREQERECkqJ4aYlcQLL4cEWOo7jNXi91cDU/zMLh3/AGqNM/NZuogRSp0ebLP/AMKgPKmo+UsP0a7N5YdB5CTKIEGfoxwPKmBKP8L8H3SeRAhNLo1wY5TOobi4NfqfKSiIGpw+7mFThTHvmfSwlNfZRR7hL8QEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERA/9k=" alt="Mercedes-Benz C-Class" class="car-image">
+
+    <p><strong>Variants:</strong></p>
+    <ul class="styled-list">
+      <li>C 200 (Petrol)</li>
+      <li>C 220d (Diesel)</li>
+      <li>C 300d AMG Line (Diesel)</li>
+    </ul>
+
+    <p><strong>Engine Options:</strong> 1.5L Turbo Petrol, 2.0L Turbo Diesel with Mild Hybrid</p>
+
+    <button class="btn" onclick="toggleFeatures()">Show/Hide Features</button>
+
+    <div id="features">
+      <p><strong>Key Features:</strong></p>
+      <ul class="styled-list">
+        <li>9-Speed 9G-TRONIC Automatic Transmission</li>
+        <li>AMG Line Styling for C 300d</li>
+        <li>Digital LED Headlamps with Adaptive Function</li>
+        <li>18-inch AMG Alloy Wheels (Top variant)</li>
+        <li>Panoramic Sunroof</li>
+        <li>Electric Front Seats with Memory Function</li>
+        <li>ARTICO Upholstery (Nappa in AMG)</li>
+        <li>12.3” Digital Instrument Cluster</li>
+        <li>11.9” Central Touchscreen with NTG 7 MBUX</li>
+        <li>MBUX Voice Assistant ("Hey Mercedes")</li>
+        <li>Wireless Android Auto & Apple CarPlay</li>
+        <li>Biometric Fingerprint Authentication</li>
+        <li>Wireless Charging Pad (Front)</li>
+        <li>64-Color Ambient Lighting</li>
+        <li>3-Zone Automatic Climate Control</li>
+        <li>Rear Center Armrest with Storage & Cupholders</li>
+        <li>Burmester Surround Sound System (Top variant)</li>
+        <li>Adaptive Cruise Control (DISTRONIC)</li>
+        <li>360° Camera with Parking Assist</li>
+        <li>Active Parking Assist with Parktronic</li>
+        <li>Blind Spot Assist</li>
+        <li>Lane Keeping Assist</li>
+        <li>PRE-SAFE® Safety System</li>
+        <li>Multiple Airbags + ISOFIX Mounts</li>
+        <li>Auto Dimming Mirrors (Inside + Outside)</li>
+        <li>Keyless Entry with Push Button Start</li>
+        <li>Hands-Free Boot Access (Kick Sensor)</li>
+        <li>Dynamic Select (Drive Modes)</li>
+        <li>Hill Start Assist</li>
+        <li>Run-Flat Tyres with TPMS</li>
+      </ul>
+    </div>
+
+    <p><strong>Price Range:</strong><b> ₹60 lakh – ₹70 lakh (ex-showroom, India)</b></p>
+  </div>
+
+  <script>
+    function toggleFeatures() {
+      const features = document.getElementById('features');
+      features.style.display = features.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
