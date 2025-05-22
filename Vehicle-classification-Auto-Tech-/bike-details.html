@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Details - VehicleWale</title>
+    <link rel="stylesheet" href="bike-details.css">
+</head>
+<body>
+    <header>
+        <div class="logo">VehicleWale</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="filter.html">Filter</a>
+            <a href="contact.html">Contact</a>
+            <a href="buy.html">Buy</a>
+        </nav>
+        <button onclick="toggleDarkMode()" id="darkToggle">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+        <section class="bike-brands">
+            <h1>Popular Bike Brands</h1>
+            <div class="brand-filters">
+                <button class="brand-filter active" data-brand="all">All Brands</button>
+                <button class="brand-filter" data-brand="tvs">TVS</button>
+                <button class="brand-filter" data-brand="honda">Honda</button>
+                <button class="brand-filter" data-brand="yamaha">Yamaha</button>
+                <button class="brand-filter" data-brand="royal-enfield">Royal Enfield</button>
+            </div>
+        </section>
+
+        <section class="bike-grid">
+            <!-- TVS Bikes -->
+            <div class="bike-card" data-brand="tvs">
+                <img src="https://bd.gaadicdn.com/processedimages/tvs/apache-rtr-160/source/apache-rtr-16062e4d94d05daf.jpg" alt="TVS Apache RTR 160">
+                <div class="bike-info">
+                    <h3>TVS Apache RTR 160</h3>
+                    <div class="specs">
+                        <span>160cc</span>
+                        <span>15.53 PS</span>
+                        <span>13.9 Nm</span>
+                    </div>
+                    <p class="price">₹1,24,000 onwards</p>
+                    <div class="features">
+                        <p>• Single Cylinder Engine</p>
+                        <p>• 5 Speed Manual</p>
+                        <p>• 45 kmpl Mileage</p>
+                    </div>
+                    <button class="compare-btn">Add to Compare</button>
+                </div>
+            </div>
+
+            <div class="bike-card" data-brand="tvs">
+                <img src="https://bd.gaadicdn.com/processedimages/tvs/raider/source/raider62e4d8e16f3c7.jpg" alt="TVS Raider">
+                <div class="bike-info">
+                    <h3>TVS Raider</h3>
+                    <div class="specs">
+                        <span>124.8cc</span>
+                        <span>11.38 PS</span>
+                        <span>11.2 Nm</span>
+                    </div>
+                    <p class="price">₹95,000 onwards</p>
+                    <div class="features">
+                        <p>• Single Cylinder Engine</p>
+                        <p>• 5 Speed Manual</p>
+                        <p>• 67 kmpl Mileage</p>
+                    </div>
+                    <button class="compare-btn">Add to Compare</button>
+                </div>
+            </div>
+
+            <!-- Honda Bikes -->
+            <div class="bike-card" data-brand="honda">
+                <img src="https://bd.gaadicdn.com/processedimages/honda/shine/source/shine62e4d83e26051.jpg" alt="Honda Shine">
+                <div class="bike-info">
+                    <h3>Honda Shine</h3>
+                    <div class="specs">
+                        <span>124cc</span>
+                        <span>10.74 PS</span>
+                        <span>11 Nm</span>
+                    </div>
+                    <p class="price">₹78,687 onwards</p>
+                    <div class="features">
+                        <p>• Single Cylinder Engine</p>
+                        <p>• 5 Speed Manual</p>
+                        <p>• 65 kmpl Mileage</p>
+                    </div>
+                    <button class="compare-btn">Add to Compare</button>
+                </div>
+            </div>
+
+            <!-- Yamaha Bikes -->
+            <div class="bike-card" data-brand="yamaha">
+                <img src="https://bd.gaadicdn.com/processedimages/yamaha/mt-15-2-0/source/mt-15-2-062e4d9e8e8e67.jpg" alt="Yamaha MT-15">
+                <div class="bike-info">
+                    <h3>Yamaha MT-15</h3>
+                    <div class="specs">
+                        <span>155cc</span>
+                        <span>18.4 PS</span>
+                        <span>14.1 Nm</span>
+                    </div>
+                    <p class="price">₹1,67,900 onwards</p>
+                    <div class="features">
+                        <p>• Liquid-cooled Engine</p>
+                        <p>• 6 Speed Manual</p>
+                        <p>• 48 kmpl Mileage</p>
+                    </div>
+                    <button class="compare-btn">Add to Compare</button>
+                </div>
+            </div>
+
+            <!-- Royal Enfield Bikes -->
+            <div class="bike-card" data-brand="royal-enfield">
+                <img src="https://bd.gaadicdn.com/processedimages/royal-enfield/classic-350/source/classic-35062e4d8aa26e2.jpg" alt="Royal Enfield Classic 350">
+                <div class="bike-info">
+                    <h3>Royal Enfield Classic 350</h3>
+                    <div class="specs">
+                        <span>349cc</span>
+                        <span>20.2 PS</span>
+                        <span>27 Nm</span>
+                    </div>
+                    <p class="price">₹1,90,229 onwards</p>
+                    <div class="features">
+                        <p>• Single Cylinder Engine</p>
+                        <p>• 5 Speed Manual</p>
+                        <p>• 35 kmpl Mileage</p>
+                    </div>
+                    <button class="compare-btn">Add to Compare</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="comparison-panel" id="comparisonPanel">
+            <h2>Compare Bikes</h2>
+            <div class="comparison-bikes" id="comparisonBikes"></div>
+            <button class="compare-now-btn" onclick="compareBikes()">Compare Now</button>
+            <button class="clear-all-btn" onclick="clearComparison()">Clear All</button>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 VehicleWale. All rights reserved.
+    </footer>
+
+    <script src="bike-details.js"></script>
+</body>
+</html> 
