@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mercedes-Benz G-Class Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+
+    .container {
+      background: #ebe4e4;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #0b0b0b;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .car-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      filter: grayscale(10%) brightness(90%);
+    }
+
+    p {
+      color: #0c0101;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .styled-list {
+      padding-left: 25px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-left: 4px solid #e81515;
+    }
+
+    .styled-list li {
+      color: #0c0101;
+      font-size: 17px;
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .styled-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background-color: #e81515;
+      border-radius: 50%;
+    }
+
+    .btn {
+      background-color: #e81515;
+      color: #efe8e8;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #features {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Mercedes-Benz G-Class</h1>
+
+    <img src="data:image/jpeg;base64,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" alt="Mercedes-Benz G-Class" class="car-image">
+
+    <p><strong>Variants:</strong></p>
+    <ul class="styled-list">
+      <li>G 400d Adventure Edition</li>
+      <li>AMG G 63</li>
+    </ul>
+
+    <p><strong>Engine Options:</strong> 3.0L Inline-6 Turbo Diesel, 4.0L V8 Biturbo Petrol (AMG)</p>
+
+    <button class="btn" onclick="toggleFeatures()">Show/Hide Features</button>
+
+    <div id="features">
+      <p><strong>Key Features:</strong></p>
+      <ul class="styled-list">
+        <li>Permanent All-Wheel Drive (4MATIC)</li>
+        <li>3 Differential Locks (Front, Center, Rear)</li>
+        <li>9-Speed Automatic Transmission</li>
+        <li>3.0L Diesel Engine with 330 hp (G 400d)</li>
+        <li>4.0L V8 Biturbo Engine with 585 hp (AMG G 63)</li>
+        <li>AMG Ride Control Suspension (G 63)</li>
+        <li>20- to 22-inch Alloy Wheels</li>
+        <li>High-Performance LED Headlamps</li>
+        <li>AMG Body Styling (G 63)</li>
+        <li>Electrically Adjustable Front Seats with Memory</li>
+        <li>Nappa Leather Upholstery</li>
+        <li>Heated and Ventilated Front Seats</li>
+        <li>Rear Seat Entertainment System</li>
+        <li>Multifunction Sports Steering Wheel</li>
+        <li>Dual 12.3-inch Screens (Digital Cockpit + Infotainment)</li>
+        <li>MBUX with Voice Control ("Hey Mercedes")</li>
+        <li>Android Auto and Apple CarPlay</li>
+        <li>Burmester Surround Sound System</li>
+        <li>64-Color Ambient Lighting</li>
+        <li>Multi-zone Climate Control</li>
+        <li>Off-Road Information Display</li>
+        <li>360-Degree Camera with Parking Assist</li>
+        <li>Adaptive Cruise Control (DISTRONIC)</li>
+        <li>Lane Keeping Assist</li>
+        <li>Blind Spot Monitoring</li>
+        <li>Hill Descent Control</li>
+        <li>Auto-Dimming Mirrors</li>
+        <li>Sunroof (Electric Sliding)</li>
+        <li>Wireless Charging Pad</li>
+        <li>Keyless Entry & Push Button Start</li>
+      </ul>
+    </div>
+
+    <p><strong>Price Range:</strong><b> ₹2.55 crore – ₹3.30 crore (ex-showroom, India)</b></p>
+  </div>
+
+  <script>
+    function toggleFeatures() {
+      const features = document.getElementById('features');
+      features.style.display = features.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>

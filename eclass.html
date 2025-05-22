@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mercedes-Benz E-Class Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+
+    .container {
+      background: #ebe4e4;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #0b0b0b;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .car-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      filter: grayscale(10%) brightness(90%);
+    }
+
+    p {
+      color: #0c0101;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .styled-list {
+      padding-left: 25px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-left: 4px solid #e81515;
+    }
+
+    .styled-list li {
+      color: #0c0101;
+      font-size: 17px;
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .styled-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background-color: #e81515;
+      border-radius: 50%;
+    }
+
+    .btn {
+      background-color: #e81515;
+      color: #efe8e8;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #features {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Mercedes-Benz E-Class</h1>
+
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSERMSExMWERIWFhUWFRcWFxgWFRgVFRYXFhUVFRYYHiggGh0lGxYVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQFy0dHR0rLS0rLS0rKy0tLS0tLSstLSsrLSsrLSstLS0tLS0tLS0rLS03NzI3LS0tKzc3KystK//AABEIAKgBKwMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQIDCAH/xABFEAACAgEBBAUIBggFAwUAAAABAgADEQQFEiExBhNBUXEHIjJhgZGhsRRCUnLB0SMzQ2KSorLwFVOCwuFU0vEWJGOj0//EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABsRAQEBAAMBAQAAAAAAAAAAAAARAQIhMUES/9oADAMBAAIRAxEAPwC8YiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgImNrddXUN6xgvd3nwHbIZ0g8oSU8ARXkZG951hHYVrXkPWeHrgTycHuUc2A8SBKK2j5R7bCQosf7z7o9tdf/AHTTP0p1BOeqqHj1vyNsD0T9Or+2vvj6YnYwPtE83v0rvHA10+64cP8ATaJ26fpwRwekeNdjp/WHgeijrF/sj84+mr3/ABH5ykdmdLKriFW5q3PALaQuTyASwEoTk/WKHuBnPa+t1aBmrYtu+kpyHGOfD1f367Eq7BrE7/lPo1afanms9M9SfrmB0u1X2yJFelheveJzFg7x755pXpfqx+0Ye+ZVPTbVj9qYHo6JQ+h8oGrX6wPf5uPkQZJ9meU1zjrFRvev8wzj3GBaMTSbD6UafVEKjblp49W+AxxzK4JDj7pOO3E3cBERAREQEREBERAREQEREBERAREQEREBETU7Q22tfBRvH4QNqzADJ4CR7a3SQLlaeJ7WPIeA7Zotp7cezgxIXuA4TXPqPMfcYJZusKmYEqrkYVyBx83njvAliVG+lnSdxY1dbb1oOLLDx3T2ogPAsO08l5c87sKKZJZiWJyWySST+8x4kn8JJz0TcABbamx3tZk+skpxPtnTb0Tv7OqbwsUZ8N/EaI4byOAAA7gJ960Ht+Bm1u6M6ofsHb7m7Z/QTMC3ZVqHz6bKwOe8jL8xIrX3jmZw0DFbA4OMZ+WPxmRevD2zFV8D3/HH5SauO3ajb43vrDme8evvm+6IdJCSunubHIU2MfRPIVWMfqHkpPoHh6J83WbL2PbqASuFTO6WbIGe3AA4yR6TyYNajbtwNhxu5QhO3Kt5xOD39mORjjm4ctzWN0s2DgNfUuAD+lTGCjg4Jx2AngR2GRG67IHcSD7h/wAywdg7UcNZpNSMaqgbjq3HrakUBwT9ZkAPH6yYP1CTFumewTp2FlfHTuTj9xjzRv7/ACGtZxp6ePDOJyR8Nj1zEotwcmHsySZFbvR28+/PGZiuD4zRae/BB7+BmwpuB4Llm7gP+fwgbVLSPWMg+BByD6iDxBHKTnoz5RrqMJqN7U0/aHHUJ/8AqoH+vhzcnEryqw+HiQJ3K45ggH4QPSGy9p06mpbqLFtrbkyntHMEcwR2g8RMuecNl7TtofrdPaabOG8OPV2Y7LUBG9w4b3pDvxwlq9DvKNp9T+g1DLptUMeY7ALZnkan4BvDgfVAnUREBERAREQEREBERAREQEREBERA1u1tWB+iBxY4JHgP7+BkV1VLjtOfGdfSHUF9S7Dkp3B6tzgfjk+2dml2l5p6wjdUElmIG6AMklj2eM1mJusPfs7z7cH5Zn1Eds5VW8UU9nhI/qfKrs5LNwLbcM8XRBueI3mDEeyTfo7tvSatBbp3Dr6LcwQewMp4qR3EcjnlFSNU2zSw3hWjL3pj4hDke2Yz7LPYMe0/jJu4rzxUE+sZn3eTuEUiBNs9p86qxeTMPAkSemuszot0dZI8fwMtIgd9TMMOq2D99Ff+sGYR2XT/ANNWPuKaz/8AWVEsG7Zi9gVvFmUj3Ag+0TFGyOecDu45+OB8pOjtWu1tBqRujTX/AEdBn9HYu+uSckhiC3HuOZiJtbbFCluv0rqAT6ODw/0DjLPfZJHIzB1eyQwIetLB3Oit8xL0KN1u2NRfq/pTLjVl0IdMY3kCqnmg9wAPDjxllvSWq3bKtxbEVmqbju5HFM9u628Ae0AHtmyPRfSA730VFPehdPgDj4TvGyqccC6c/ssOZ9QPxjMN1X7dCKC5/TW1r2KArYHi0y6egWjPPUageysfJDJg+xc+jYp8QVP4zos2XavYGHqIP/PwiYl1qNN5PdF/nXN/rQH3BRM5fJ9oRzFpP71jfhPrKy81I/v1ztq1ZXkxX3ge4xFr5X0H0Y+pvD7zZ/mJzMtOjGhHOsjxVfnumc6toN2gN8D7xMlNYp+0vuYfhJCuel2FoQQRSrkcsnI9qLhT7RN2uoqHJFHgoH4TRMFb7LfA+44nEkjtI9R4j4xCpOm0ccmI/vu5TITazDtDeI/LEiAvPb8PyM5reewxFqaV7ZHavuP4NiZSbSrPNt373Ae/l8ZBF1RnamsI5HHh+UkKsBWBGQcj1T7IJTrypyMqe9Tu+8ds2ml6QsPSxYO/0W/I+4RCpPExtFrktGUOe8HgR4iZMikREBERAREQERECsdsua9Xep/zC38eH/wB0gXlO2o3VV6as4NzZf1qpACn1Fjn/AEyYdLL3XW2rbWat981N9SxAoA3W5FuGSOfGQDpYoOsoLEqq1McgZxhm447ec18Z+sHRaSrToAy5I60PvcDvV17/AM8+4+JztDrDobk1dBO55o1NQ45RxnB7CQCSCO0EcOM66dJW1T2WuAN0KXBLh8K9aMFUZ3iLCpHA+b7+SUvvWVqhauxWeywjCHIJpWve+qAF9HPM+Ey0uVNeHRWU5BAII7QeIPtGD7Zw+lGQryf7TB0iox/Vk1+AXBT+Rk90mFFtTfXHtOPnNsO8awz42uOR4/gZ3jQ55Tpu0J4eP4GBz/xAz7/iUw7NMRMZ1IlG2G0py/xATQsxnA2mIVIDqVPYJ0oqMB2cBNINQZz0+qOB4CIVt20APKYWp0bjlmZui1GBvE4Alc+UHymPXY2n0uOsHBnwGCH7Kjkzd5PAcsd0Ets0mo7FOPEfnMC1XX0lx7MfESn32lr3Jd9VcpPHjawx4AEAeE2+xemmspIV7BrKu1XYF8fu2c8+ORJ+l/KxRjux4cJ9t1qVLvWWIi97kIM/ePD2Tp2br6tRWLaiSp4EEYZG7VYdhGfxGQZ07b2INVWFJ3WU7yNzw2MEEdxH99h0y2ei2tp3G8H83kW3HKjxYLj4zZaPaGkc7o1WnLfZ66sN/CWzID0M2O2n1a13pagz5xrc5dftVhMO3r3cnw5SQbcFiF9xrxVk4GpottUKSuN/eQkAKDz5ZOeAjfFTevYG+Mo3+4e8Tqt2C6kA4yc4xxJxzwo4n3SH7D2QHpOoWvR2Df3T9HHUOeWcGjdPb2mctdqLtMHdDqqSFPFtTY9YwCQ7Nc1nBeJ3cDxk24qXjYz/AGT8B8zPv+Dt3D3/APErno50v2lcLb7tfYmjowbGFOm6xixwlVeauLnh4e2Yuq6f3PlR9Is54Lal1yOGCRp1rxxIHDPMHjlcykWcdjsOWB7D7e2YOpC1+nYqfeKr85VtnSi1s5WnGCf0vXWtwwDnr7LASDkEe7ODjtOq11Khi9NRbLdXXVWrqMDzWNdKjIJ47rEjPHkSFWLJ0e00DBq7d8jluef/AEg8JYeju30DHn2+I4TzDqdualx52qvx39a+7z7s8O33duZcXkY2tbbo2ruLMa3IrZs5atgrDieJAJIB7vCQWFERIpERAREQEREDF2ls+rUVtVci2VtzVh7iDzBHYRxEpryhdBLtKw1VbjUadFKbtgzapsYBA2P1g3iBngeIzniZa239u/RRk0WWLj0lxuD1MeJHtEr/AKT9P+voto+jhVdcbxcsQeasMAcQwBHhAgFOnZ6mAWoWpYlpCDdAI9IM+SN/BU5GSOGRjzp13hOvq6w2KwyylTv0llPngg4IfsyByxnjOFFXFN07lYatRn7b2h7CxHMhU3QPA8MzG1TmmtnJDb6BcH/OUdW1ig8vMGC3e2Ow4DP6D6w711YGeFb8MetW5n1LJS9xHYfcce+VPs/bFmms6ypt1sYOQCCOB5Hwkv0flPvAHW1UWeNYB96FflNZrO4lNG02T0HK/dYj5TYU9Kr1xlg+D9ZQewjmMH4yMVeUTR2cLtGB60c/0sv4zPo21si79rZQe5hkD2IWlqRKaul4Pp1DxU/gfzmQNuad+ZKeI/7cyNV7M0tn6jX1MewOQp/hyDOy3ozql4ruWDvDYz4BsQJCWrf0XU+BGfdMe3TyNW6S+v06bFH3SR8MxTtAjgGI9WfwlRu3QidVJ4DwExV2g3ac+M7U1OQOEDh0p2ydPo7bAfOC+b94+anxOfZKm6P7LNh3zxcgtkkZxxPDJ4s2Dj2k4AJkx8o9hOnrTse5FPhhj+AmooRerVUcJaeKhsgbxOE3W7W3QuFHHJPfM8muL7XqFFF/VjctpIdtw/pdziGVn4HhxY4wOA4DInK3aFltmjpLOxs09bYbFi4JsZmZbOBO6OfbgTJ2bQWcXWqtdxVqrs46mwHgN5x5o85VBOcDipxlZ1otZ3jp7VeyuhaUJ5qgFQDEDOW6y5QFUMWNLqAciZad+yNSlWoayjhUc9amd5TWuc21k8fM85ipJwpbB7BPVlYbP1PU/wDt9KruR+suUbx3xjCgrlVA7SDjsBOCzWJsmzeprJG6SoyO48iOHdjHsmuOs8m4rrSxdyxVsQ81cBlPiDwmSOjuksUI+nrZByUjzR4LyE19L4nPV9LdLpeF1oD/AGFBd/VlVBI9supjN1XROhlArREI9HeUuoPsZbPc4HHlIX0n8nWqs3rkXT2uASErNtbNk5OOuZwT6t5ZIavKZoCcbzjxSwf7ZuND010VnBLlLdg3lB9xOfhIqp9maxbdmtosdVfp72vdAhNjqAwYhWYZdM4KnHAHnymrSvTgbzWXYBHEaZRwy3b154bpPrwR2nMsfptsWrUsNVQ4o1ikFbRwD45C3HsAbjjkcjlBbNMGOLEOjs5FWS1qCePGq2pXG7x4LjCjIBPDE3Froo1GkRlYnVNgq5BVVB3ODBhhuzCsAeIwASJvzr67t5LLXs1FP0qyyxUVaN2xAGrQABvNCphsYYuwHNSdTpejDOB1b12Ds6v6Q3ADC4xVnhxHge/jN7ouhWsNfVZIq4ebuk8BkhcWohZQT5oZsL2SKjWl2u+8OrrqpwACyVg2eBts3rFPqz7eUszoLrRpdPVbfYxe+4sC5LWMp3Uyd45xurnPdjvxNdp+hw0qm6+oWIgX0n324kABaFXd5kcGd5y2Xs86ra2ndzlCTYKiCu5TpwN0BccQX6vI4A7x7OBC5oiICIiAiIgIiICajaXRnSX56yhCT9ZRuN/EuDNvECudo+SaliWo1N2nJ7CFsThyyPNJx4yHbc8i+0LG3l1lN577BYjf7/nL3iB5l1Xkb2knEotg/cZT8Cc/CaPX9DNVT+tqdPvIyj3kYnraDA8bWbJcdhmM+jYdk9fa3o7pLv1mnqYnt3QG/iGDI9r/ACYaGz0Q9X3WyP5wT8YHl4Iw5EjwJEzNHtjU0/q7rK/usV+UvDaHkZBz1V6n1OpX4gn5SL7R8kWsT0a1sHejr8mwfhAiuh8pG0Kv2vWDudVP8xG98Zu6PKuWGNRpK7O8jh/XvTTbR6Eamr06LF9ZRgPfjE0t2xnH1TAsTT9NNlW+nVZpz3rkL8Gz/LNvpX0VuOp1yAnkLcAeHHdb4SmLNCw7J0mgj1GWpFneUbZ71UUsxRl69MMhznKv2d3tmns0dT1DeLY6sOcEcdys5Ues7pAHfIWtzgYycc8HiM9+DJPsraeKshQXXtP1UySSB3qxzn97ujdMbWvTizTWYDKRXwDVN1qoo87fu68LWoQ5w4OQcqp5zD0GsrZ6VrG5ahUkkdV1aIrC7rberOAcgb3nY5+bkwl7VWVB/wBNqLXDBTgiqlW3zheQ9EtgD0gCRlMNlf4ku6rlud30drAdxhaPpGXyMYLCw8c4HWZ+rIrq1z2vZuVautArcamO7YMHioZme0nsw26PUJLujwZK8PzLMe/gcYPv3pCa6UsO7eqpfU4rrdRgWDdBTKD0VwUx2DeGMAEHf9FrlXrai6kowXmPObizkcsgOzAHuAlz1N8ZHTTpN9GXqqmAuYZLc9xe8DtY8cdg592auGpbLEMcsSWOfOJPMluZMl3TDozebn1FatdW+C24Cz1kALxUcSvDgRy5HHM6rS9FNQ6hlDEHkR/5l2mRqFc445I5/wBnEyNJW9jBa0ZyTgBcnJ7hj5SddH/Ju7edqGVF7mtQsfBFPzxJY9tez62+i0BmAw2otzXpkz9q446w/wDx1ZJ5cDJCorofJ/tfqRYbK9LX3X3buB+8N1gPAnPqmBtPZrV1v1m2NEHA4JS9lhYj6pdE83u5GdO2ttNqm3rtVScE4NrtnxSqtGWte5Rx+0SeUcv0GnY7zaxc9yU3MeeT6SqO3vikXv0X6S6OjZ2iFurorYaanKm1d7IRc5XOc59Uw9o+VDZlfK+y491VbZPgz7ox7ZSiaXRcMvqbccBhK6R7y7n4ST7ATY43eu0l9pH2tQCPDCIvD85FSHbvlZ69DTpNPbWWKjrnKEpxDH9GAyklcjie2Zfk61O0vp9L2pa1bFgesU4FbDHWDA/RkHHPAYDvElXRDbex6gBVUmmf7TVLvHP79a4HtxJ5oto1XDNViWfdYH3gcoGVERAREQEREBERAREQEREBERAREQERED4ygjB4iaq3oxo2yTpqjn9wTbRAiWu8nOz7f2RrPejEfBsj4SNbR8jVLfqryvqdA38ykY90tKIFBbU8jurTJQJcP3GAPufHzkKu2TZp3ODuup7CDgjwyD3donrKdGo0Vdnp1o/3lDfMQPLui16NcbbG6uwBjgjgXwQoVwCVXsweAHI93XpET6NZUTSrCxLEBtrIJxuuQqtngADPRWt6B7NtyX0VGT2qgRv4kwZpdT5INlN6NVtf3b7T/WzQKL1+01whHnXhSrWjIGMndKA4JYZPnnGM5HHBGgtvHZz9Xyl763yF6U56rUXL6n3XHvG7NFrPIlcnoMlg9TYPtDAD4mBUtWusXirsp9RxMhdu6octRaD6mIMn1vkl1i8qSfBkPyaY58l+tH7B/dAhn/qHW/8AV6j2WuPkZiavU23EG2yy0jkbHZyPDeJlgp5Ltaf2Dfyj5mZlHkm1p51Y8XQf7oFXLSZ2ppz3S4NL5HtQfSapfFjn+VTN3o/I8o9O8eCoT8Sw+UCjqtIx7JsNNs1z2GX7ovJho09I2WerIUfAZ+M3+h6LaOn0NOmR2sN8+98wKH2L0cvtIFdbv90EgeJ5D2yzOi3QW5GSy5+rCkHdU5c444LDgvsJ9ksRVAGAMDuE+wEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQERED/9k=" alt="Mercedes-Benz E-Class" class="car-image">
+
+    <p><strong>Variants:</strong></p>
+    <ul class="styled-list">
+      <li>E 200 Exclusive (Petrol)</li>
+      <li>E 220d Exclusive (Diesel)</li>
+      <li>E 350d AMG Line (Diesel)</li>
+    </ul>
+
+    <p><strong>Engine Options:</strong> 2.0L Turbo Petrol, 2.0L Turbo Diesel, 3.0L Inline-6 Turbo Diesel</p>
+
+    <button class="btn" onclick="toggleFeatures()">Show/Hide Features</button>
+
+    <div id="features">
+      <p><strong>Key Features:</strong></p>
+      <ul class="styled-list">
+        <li>9G-TRONIC Automatic Transmission</li>
+        <li>Multibeam LED Headlamps</li>
+        <li>AMG Styling Package (E 350d)</li>
+        <li>Air Body Control Suspension (Top variant)</li>
+        <li>18- & 19-inch Alloy Wheels</li>
+        <li>Electric Sliding Sunroof</li>
+        <li>Power Adjustable Front Seats with Memory</li>
+        <li>Rear Reclining Seats with Chauffeur Mode</li>
+        <li>Nappa Leather Upholstery</li>
+        <li>Massage Function for Rear Seats</li>
+        <li>Luxury Rear Armrest with Touch Controls</li>
+        <li>12.3” Digital Instrument Cluster</li>
+        <li>12.3” Touchscreen Infotainment (NTG 6)</li>
+        <li>MBUX Voice Assistant</li>
+        <li>Burmester Surround Sound System</li>
+        <li>Android Auto & Apple CarPlay (Wireless)</li>
+        <li>64-Color Ambient Lighting</li>
+        <li>Rear Touchscreen Control Panel (for AC, Seats)</li>
+        <li>Wireless Charging for Front & Rear</li>
+        <li>Four-Zone Automatic Climate Control</li>
+        <li>360° Surround Camera with Parking Pilot</li>
+        <li>Active Parking Assist</li>
+        <li>Blind Spot Assist</li>
+        <li>Lane Keep Assist</li>
+        <li>Adaptive Cruise Control (DISTRONIC)</li>
+        <li>PRE-SAFE® Safety System</li>
+        <li>Seven Airbags</li>
+        <li>Run-Flat Tyres with TPMS</li>
+        <li>Keyless Entry & Push Button Start</li>
+        <li>Gesture Operated Boot Lid (EASY-PACK)</li>
+      </ul>
+    </div>
+
+    <p><strong>Price Range:</strong><b> ₹88 lakh – ₹96 lakh (ex-showroom, India)</b></p>
+  </div>
+
+  <script>
+    function toggleFeatures() {
+      const features = document.getElementById('features');
+      features.style.display = features.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>

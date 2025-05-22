@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMW 3 Series Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+
+    .container {
+      background: #ebe4e4;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #0b0b0b;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .car-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      filter: grayscale(10%) brightness(90%);
+    }
+
+    p {
+      color: #0c0101;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .styled-list {
+      padding-left: 25px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-left: 4px solid #e81515;
+    }
+
+    .styled-list li {
+      color: #0c0101;
+      font-size: 17px;
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .styled-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background-color: #e81515;
+      border-radius: 50%;
+    }
+
+    .btn {
+      background-color: #e81515;
+      color: #efe8e8;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #features {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>BMW 3 Series</h1>
+
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMWFRUWGBcYGRgXFx4eGhcXFxkWGBkXHhgYHykgGBolHRYVITEhJykrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGzUjICUtLy8rLS03NjAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBKwMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABAUDBgcBAgj/xABOEAACAQMCAgYGBgcDCAoDAAABAgMABBESIQUxBhMiQVFhBzJxgZGhFCNCUnKxM2KCksHC0UOy8BUWRFOio9LhVHODk5Szw9Pj8SQ0Y//EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EACoRAAICAQMEAAUFAQAAAAAAAAABAgMRMUFRBBITIRQiUrHRMmGRofCB/9oADAMBAAIRAxEAPwDuNKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUqPf3scKGSV1RF5sx2/wCZ8q5V0r9KcjHq7JCoJ0iRgNTcz2VOyjAJycnG+O6pUckNnUOJ8Wgt11TSpGDy1MAT5Ac2PkK1G/8ASlaqSsMc05H3VCge3WQ2Of2a5Clje3jlkWSVj6zNv7Azucd/eai8d6LXcERlnjYIuNyysAWIA5McZJA94qy7V+5Hs6Rc+lmbfTBbxeHWyux966EqEvpPvm5SWI9kb7/74n5Vx60h5tj/AOzVrPwR0AaRHUHvZSoPsJG9WVi2iv7/ACO18nTovSXf5KssRONWFRo2Cn7WiXLY88YqDfeli4Q4Mmn2hf8A2/41o/DLd12XWyDtYTcxn/WL91vk3I5FTOIWq3EZ2Amj3IHIkb5APcR2gPDIO6nPRBwmmlFZ+5jNSi893o2eH0zyjmS/sAH5RVIX02P3xE+//wCKuRtcOCQTyrF9LffFc7sX0r+/yadj5f8Av+HbYfTkn24dPsDH+lWVr6bbI+sGHnjH8TXEOGcOurjHUwSyjxSMsv7wGB8a9vuESRMVlXq5F2ZTjUMgEZAyORHxqvevp+/5Ldr5P0RZelbhsn9sFPn/AM8VsNj0ps5f0dzEf2gPzr8l2Vo0kqIpGWYDtYUDJxu2MAeZrptt0Gv4xhrdX9kkZ+RYVGY8D2d7hnVxqRgw8VII+IrJXBreSSCTDLLBJ5MyNgeHivxFbjw3p1PCB16G5i2zJGAJkH3mjGFlHeSmkj7h51BJ0ilQeD8YguoxNbyrLGftKeR8COanyO9TqgkUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAVUdJukUNlF1kpJJ2RF3eRvAD4ZJ2Gaq+kfTu2ttUaMJ5xn6tDspH33GQndtu3gprifSO/ub1pnmYoWR8MwwNlJWFQfUUnsgDc6sknet4Utpyen3M5TSeFqS+JdPYb6UyXkrIiHCRKrGMeeV9Y+ff7MCtn6NcJtp7xkcnTBDGxTS6kNN2grAqNJ0KhxzAZhtvjkfDeHyoY2GlWRtYOqM4K4KnDHB37j4Vs3AukV/btM/ZZ53DuzNCSxAwM9sYxk4A23rJ5exfKN+416QIbeZ7eBYNERKdokdpThsBSAN8j3VrPTHpDJxK3WCPqV0yB30zL2tiqDSxzjUxPfuF8K0i5tJJHkkdTqd2c4eLcuSxONe25NVc3CZmJwgP7af8VMMejaeB8I+sihk5mXS/kA+lvcAK2npBejiE5kSReqTsxqzBcL97S5G7cz7h3CucR2EoYEIwwOYHI7d4qbb2twO0jvqxkDtK2fDWRox+1nyq9fYv1orJSehv3R/hk1vOk6DWFJDBGXtI2zDZj7R5gVB6c8RT6YkqRSQylPrBIANeCNL4BOeePPteJzqkt7egYcN7SsTMM/r4158wc1WtL9aGmeTOkgalJ2792bPjV3KEfmhqVUZP1ItOP8J1SRvCBpnKhRnADs2nSWOwwxxk92DW63no3W0szcDE13AVn7Q+qZYjqeIRn1l0g7nJJUcs4rVOFXIkt5LeQFwcMhGMq+2CQcdlkIyO4hRjY1Wz8BumcvI4cnk0jOWx+LFWspc33wXplYzUflk9Cz6T9Nbi8mJSSSGBdo4kcrgDvYoRqb5DkPO/8AR5LHemayvFE+qItHJIoeWPBCMFlbLg4dWG+2g+NahHwR/vRj3n+lWfB7K5t5BNDPHHIAQD2TswwRiTY5HlVPhrfpLeaHJrPELNreaSBtpYnK5HeUJ3HipG48QRXc/Rf0q+l2ulz9bDhW33K/Zbz5Y9wJ51zPi/ALm7na5dkaRtOTGFwSqhQdKvzwByqV0Z4becPuPpCo5BBDIYyA6kctWTjfS3tUVHw1nBHmhyd3lSOVdEqK6+DDO/iPA+Y3rXOI9DmXt2jZHPqnO4/C55+xvj3Vrh9Irqd7YD2s3/DtUy19KCD1ocf9of4x1Pw1q2CujyVL2UkczT2sjWt2Nm2wkuN9M0f2s5PaxnfO5xW79EPSCk8gtLtPot53IT9XN+tE/Js/d5+GcHFJfdL7S7XtxhXHqukmWXy9Qal8j8jvVHeRwzp1cy6wDkFThlYcmVjgqff7c1XwWcFvLDk7fSuD8HvOJWrlYZ3eFiN30sVXcH6t2wH5eocMOYU8urW3TC0EamWdUfSurUrKNWBn1hyzmkqZJZwFZFvBsVKpIOl1g/q3cHvkUfmas7e+if1JEf8ACwP5Gs3FrUummSKUpUEilKUApSlAKUpQClKUApSlAK5f6VOkzNmxgcoQR1r50g7AiMMN8bgt7h96umTzKis7EKqgsxPIADJJ8sV+duOWr3Ekkoydbs37xJ/jXT0tTnPOyKWWRjF51en5K6Dh+j1ZIPfv8iMVlYzAjM8CruSRAjYA79IiJPwqruODSIdLEKT3FgD8Cc19/wCSrhf7Nx7jXqM4ljkypfXLZMU0DqPtC2iwT4DrIgTj2d4rG/E74fah/wDD2/8ACOvDbT96t8DQW8v3T8Koq09ck9/GD6XpHdAYaK3bzMAH/llazJxu56vX9EtypJ7R6wEnvwPpAJxy2FRWgfvU/CvGt3wMNIuPusw+Q2qHS9m/5JVkd0TP840+1ZL56ZnU/B1bHzrIvHrYjt2sy+GmZX/vRrVV9DI5Cvg27eFPHJbsZg9i5HELE5x9Ij9sKH+7Jn5Vha0sZDvcqf8ArIZRjy2jI+dVfVHwr3T5U7HuT8psUdhFkKt1bsANgZ1Xn3BZCCDtyx3iph4BOBlEYjxTcfFa1NFGRkbd+NjjvwSDg+416I1DalGCOR21D9oAb+4VePcvSwUcYsu7mGZdiXHkSfyNRvpUi+Hs0KPmAD86+rLi9yuwnlI8Gcuv7r5Hyqfe8RgYfWsiP36VO/npQHB9wFaZ3ZnjgrTxD7yL+ySD8XLVLtOJxjkHQ/qn+IIPyqD9TIcRzJnkA2Vz7NYGfZXk/CpF5gj3VHp6E45L08afunZh+sdQ/dkz+VYWvgw7SRP56dJ/3ZVfka13DZwNz4LufgKkLZzczE6Z++BGT7pCCR51m7a4vDZbxSehYSi3bmjJ7CHHz04+dYuqK/opz7AxH+w+xPsBqObO4x+idvwgN/cJqNcLIgy8ciD9aNh+Yp5qnuFVNFkOLTLs2G8/Vbz5ZU+zAqbb8cb7EjA/dbYn56T5AHJ8K1f6WPH5171tSpR2J7HubY3GiTiWON/EPGCffkZrNHc2TY1WqqfGJ3jx7kYD5VqkV0QAD2lHce78J+z7Nx5Gplpayyn6mGWQHkVQnPvAwfcaluGPm9Edk1obpZSKP/1uI3lue4MwlT2aTp295q7h4vxqMZSW3vV7sAK+POM6NXuetDi4Bfj/AESf9w1PtJLqDaW2uV3B1iOQacEZ30lcYz3Z35jG/NZCp+00zSErFqjcYPStJG3V3Vmyt3gExye6KbCnu5SEnPKtx6PdMbO8OiGXEo5xSApKMc+w27AeK5HnXNeHdLkn/wDx5kW5G/Z6suTjbITBZTuOXI95517xPolE4D24uIyuGEckM3YI5dXLo1oR3A59ornlRBavBqrZcZO0UrkHAOnt1bv1N0ruo/1qMkoHj2gNY8966fwjjUFyCYZAxXAZc9pSQGwR3bMD76wsplD29OTWM1L0WFKUrIuKUpQClKUBpPpgvGj4a4UkdY8aEj7pOoj2ELj31w+HjklupkRyjjYeBPiQdjjc4OxrvPpTs+s4bN+oY39gV11H93VX5t6TpgIo78/wr0Onl20SZzWLNiRCFzNKzOX5kksxyWJ3JJPM1dcP47cxjqxcTKFHZCyuFAH2QA2APL218SF4LcNCWUrpLOhIJD9YpBI3XS0RB8S/4cZeN25x1hGHVuqkI+3Igw0uO4M6TDz6vPMmueu6Sl7NpQTR9f533o/0qX3uT+dejplff9If3hT+YqntVDGreHh4PdXfGDloc8pRjqet0yvTsZgRy3iiPzKZrMnTe67+qb2wx/yqKxScJ8qjNwvyqzqkivkgyyHTWT7UFs3/AGbD+64rKOl0Z9azj/Ydl/vaqo2sMd1YntcVGJIn5GbGvSK0b1raRPwyB/kUX869XiFg3fMn4o1I/wBhyflWpyR4rHUeSSHjibcq2jercrnJ9ZHHftvpxyx31It+DLIcRyxOfASLn4Eg1pSmrC3kwCT3CrxsbKyqWxYdInFsxiJw6+tg8iRnSPPGM+Fat9IlkOEHuA/M1lEBmkxnCruT+fvNbFJClvFqYHSGCGONgHVmUsvWMwOjUFYjssTobIXAz59/USlLCZ011KKNe+jTruRkedbD0Z6SdURHcKZIeWkntReDJnmo+78MHnEbjNucBoJEH3knViPMoyAN7AV5c6++K8KaPc9pdhqAwVZlDhHXJ6uTSclSTyIBOk1nXdKL9l5QTR0BY0aRZLWQLOu6Bhu68yjKCRIhH3SSOYqm4tbxPcm46lA7srSQS6dLEYDiKVgA4YDOnUGGT2Tzqm4LPriMRPbj7S+OjO4/ZJGPJvKrODjQlHVXB7fJZPv/AKsni363f377ntnRGxKSOWNkq32ldxDhiKrZYRDd0ZUbU+QxMLRhQIn79OQBj7QIIycH4aYYw8k8iFt1VWOth46Q2FHmSBVjaCRN7d2THchOkfsjsj4VDuuI3OTrlLE89Sox+LLmsX0Vn7Gi6mDLJL1jGxEPWlTnEzBw8RAxIrMoB3yCuRpxgnJwNe/y9G+Q1ha5/ULr/tRuAa+xdHUzuquXOSSAG5BeyyYKDA5AipMXVsAIorbUPsyxKGPskTSGP4se01V9JYllFldBmHhk9ubiDNvpUyKGRpi6Nq7IG66gASDzPKs/T/jdyt3NAzPFHC6hY4pCimNgpXJCgsSpByR3nAA2qs4jkMQ0QjYDkupSNz2sFj8RVlxnisF/EpnYw3qKqddpPVTqh7IkVclXGfWUYO+QBjGcqrNy6lHY1USZOD1hOXXPW7nbUp9XmPbv5VKteLOpBWa4TeM9mZhgNkNjGMb4I8KwtwycNtC7DUTmNS67rgdpMiscfDrjYfR5j+j/ALJ/snJ7qxLm+9CelVzJHdWwLSubWVxMzaZoyp0EiUZZsBtQyc5HPfbR578vu8lw+5xrlJ74/HPczD4eFbJwzhdxZ2r3JUxTXAaFFchMQYcyMdeO0X6kBeeMnvFa/FwO6bDLaXLKTsRC5BGpeTAYOymmHqD2x4tJGwMfWZ2GGl1K25GGj04bOBsfE95GO7eizqjGpGBKW1EE9rtJltsk43Hw91ci4D0deFvpN6pgjiAdY3IWSaUAGNFXnjWASccveVvejfGnSSS5TCMmkZ23LnvwADkRAcuQFbVUysXoznYoan6IpVT0Z42l3AJV550uPuuACR8CD7CKtqxaaeGXTysoUpSoJFKUoCFxq1EtvNEQGDxuuDyOpSMe/Nfkzi76po0JPZbmeeMjGfPnX7ArkPpO9Gcfb4jbHQYg0ssRGVdV7Tlduy2Aeycg/q1rCzEHHko45kmcs4PcpKz2rDIcSAOBkKzEZDY5ITHG3kyDkGbPvErotPdg40qAMDGAyTRIzDHiZZjnv6wmrHh3FZGnW2655SP0hJ+oRFO8UUIATBJCFyuO12QANRj8VvHliedtDK6qgfSBIkgdWaIkbsjCMuurIA2UjDCsy5rkLFT762Dh3FFGzDI8Rz+HfWsowLbkDfmc4+QJq2tOGh8aJoST3daFPwkANelTY0vRzWQT1Nytikn6NlfyHrfuHte/GK+DByBGDgVQt0WuiPUBH4kI+TGsi2XEkGAJiPDDMvwYFa6VY+Dnda5LN7YVEnsxUZuJ3iDEkCt+KPB/3JWvT0hX+0tnXzWT+V0/mq3lW5XxS2I1zaVWzWvhVu3Ebdv7SRPxxgj4oxPyrAyo3qzRN5Fin/nBB86pNwZrDvXplMy451In2UipMvD5WUlIzIPGMhxttzQmq+eN1UB1ZDjGGUg9nYbHy0/OsG8GyWSZwxuph64AFwQwBGRrO65HeoCk4OxIAPPFWdpZK0mxItr9WjQliwiuQQ6xMx31LKAuo7mOXV9pqrbqQKkanvJPu7OD54aP5mnAbwLHLrAeGRlEkRbAYkMVKn7Ei4bD8x4FdQPmxj3PBu3hGDo/Yr9J+uUlYVkldT39QjyaCD3MyBP2qs7KXqkM1wGd7zdkJwTDrDvcY+8WBEZPfrPLGbi6sEKves+qGeHt4BWSQrIkkhwBgM6xEOAx0vMTuhVjpN9fvNM0smNT49XYKAAERR3KqhVA7gBVSS5XNvcjUQdDaWI5MjDGoeRVtQ91e8Uiw58jWG8OuO3YjnCAT4mOSWID3RxxCs08mpSx56fnivT6WWa2jmuWJJjg/FjAWmLupXAXQSCXbPfnZQASfcO+o9z0nndyxnmOe5nZh8CSK94csT4t5GCmQMyOTgLIMBQxJwFbDDPcSO4GrR+jUJjjIUB5NIAF0NR1Np1FGgIUZ7tWQPnz29RNSwjSNUdSFa8ZjYYeMnxZG39ug8/iKnwQxS/opkz92TsHfuy3ZJ8gxqmuejuASsiYHeZNjsDgEou+/eBVfEGQ4YEEeNa09XJvEik6I7G4XhkgCpcR5Rs6VfkccyjcxzG6kc6rOI8OQp10JJXOGRvWQnluPWXz2xsD4mLfNmEEb6DnHk2A3zC/CollxXRkaSQ2x38f6YB91b2WxTxIzhB4yjyE4YYODkDbbb211TopwW1l7MvXqQHbWJnVMK2kDv338a5HLedrIXG9bVZekieKMxJbQkMckyFyc4x9l1AG57u/mdq4rbYv9LN1F5WToDdG7IyhHtpGBkePW00h3TQCTvsCW28vbXidGbTsL9DQFl31PMNEheBQhQuGwFm1HcZ25b40h/Srdlv0NtkEHZZeYZGH9t4xp+75nMEdP7kgfUQYwwHauOTbHbr99gAD9kKuMaRjn75cmmEbD0y4PbJa9bDbRREG3fUmvViUP2WLuwJyucDGOzzzVBbXBSz1Y3eU7eKRqoU/vPKPdUPjHTG4mg6hkhSPsHCK+T1YAUZd25dnl4c6wWTlykbn6tfWx3Lq1Pv7OsbbwrqovUfT1MrK+4776HJF+izID2kmGsebQwt/HHuNb9XO/QlFqs5LrtZuJnY6jtsTnSMdlNZkwN++uiVyzl3ScjSKwkhSlKqWFKVCurIsSQ5Ge7uoCbWG6jR0aN8FXUqw8QwwR8DVXJwyTxB9/wDWqLjHRMTZLdcpPekhI/dbUoHsAoDjT8Me2uJYmGZI/q2wN2AdGEmBvpYBXz3ZHLv1e8fqoViJBOSzYOQDyCgjnjx8WNdW4z6LWc5S6CnweH+YP/LWq33ojv8AJKywSDydlPwZcfOgOcgknAySeQHea65ZejnhhgjM3EXScoDIFAZFcjJA7GSAdufdVDZdAL23bW1szsORUq+PYEJOfdWeczx/pY5I/wAaMv8AeAqcsEt+gtrEcw8ZK+y2lG/tRqhzWV1H+j4lFL+OOT/1IWrCbsnzrE9w1WVkluQ4pmUcf4imxWKTHeCV+SOn5V6/SqX+1s2PjpII8/Wjc/7VQ3nNYWnNaLqZrco6ovYlT8cs22khkT2xDb4OP7tQ5hYt6smn9lh/Lj51jac1hbSeaqfaBV11Ut1kr4VsYp+Hxc0ljb9oA/AmoFzMRsSTjYZOcezwqwNvGfsAezI/KsbcNiPiPYf61WV6eiwWUMass7e4bq06uCKWRmKqXiMrAERlVWIkockud0J59wwLmbjc1uB9KuQZe62tI4UZccutlSMCHlug1NvuFNUXD3dFeCOV061QoKnBbB2QkEbHLL4doZ2zVQlgRsPXzpx4Mdl581bb/GcYIuzeG47ILVLqRe07pqUM+nqSLmJXBlZi0wEcgBYlSrrqVtiKnizxqUElpBLFKC0NzATA8gHMdnMSyKdmRoyQfEEE/fSGZClyik6Yby1t1zn9FBFPEjeRbqmYjxJ9tQrO9dZGhQqyORrilBMZKjtM42KFQCdYIZQp3oSe8UKKkKR6+rCEjrAA4LTS5B0kg4wMEYyCNhUdmxG3uHzFYuM3is5KDCbBRvkIoCqN984AznvzUaW+BXSAeea6ummop5MrI5wYrxO0p7ggI97N/EmjXZI785JJ1Ek53OfPPfX0l4BsQrDwYf4xUmOe1b9Ijp5ppb5My4+Jqsq1J5UkSpY2K83R+8fjX1bJI77KzFu85PLzPkKvoFsNgks7sSMIlsCxPhvKBV/F0fuCuYeG3sg+84WL2dnDZ+NI1wi8yl/BDlJr0jXrRdPYdSMjBDDGQeexqju4SjFPA7HxHce/8q3TjnDeKQQGWSxMUAOCcB8Z5EjUcD9bSBnHjWqpaXD7i3lcf9UxG/hgVpfOuaWHoVrjJN5IcvcfEZ/gfmD4UB/x/j+HxrPdO8J6uW3KMN9MgZSAfI7gGsAv/wD+ae8t/wAVcvauTbJMi0AAgLnzc8/YE8fOsCoBsNwNs+JGc/P3+ysX+UW+4g939TRL6RiAuMnYAIOfcBtmmIcjL4MqQMzbAnGTy+6Nh7zgd9W1nABqRpEVmU7llHrYAwx2yFL7/r+VdE6FeiG4mSOe+uHhDHUbdVw5Tu1OCOrJ710kgd4PLfLf0S8JU5NsXPi8shz5kasfKrRlCLzqQ02iX6LpV/yfFCF0tENLDuJJLawe8Nkny3G+M1t1VvBOA21opS2hSFScnQMaj4k8z76sqzeM+iVoKUpUEilKUApSlAeFc86wvaIeaj4Y/Ks9KAhPwxDyyPf/AFrEeF45OR7v+dWVKA1m86ORP68UMnmyKT8SP41T3XQW1b/R8fgZh8lbHyrfqUByy69G8B3BmT24I+a5+dU9z6ND9idT+KMr8wzflXa6+WjB5gH2igPz9e9AJ0/1Tfhkx/fC1RzdHJQcdWx/CNQ+K5FfpdrKM/ZHu2/KsTcMTuLD3/1oD8xXPB3T1lZfxAj86jmxNfp6ThR7n28CKrLroxG+7W8LnxKKT+8RmgPzbNZNis9teRtLEbjUjxujF1GSyqwYh1yCSceuCc96k9qu6XXQS2b/AEcr5ozflkj5Vr3FfRXBINnlTw1KDj4BT86A5W8SmGZTcxEyzxSghZDgILjVkdXq5yjY+J8zUOe9VFZULEv68j4DyDY6dIJCJkZIyScDJ5Ab1eeh6cZ6q8Q+AkjZfmpb8qpLn0T8QXf6uT8Dj+cqflQGjSSljUi2hxuedbUegl3F61vJ7QhYfFcisMnBmX1gV/EMfnQFB9FUnJWsqQKPsj4VeJwqsy8KoCkXPICslvqQ6k7B8V2PxFXq8M8q+xYCgINvx28jOUu7lfZPJj4FsfKrq19IvE4xgXGrzdQxPvNRBYg8sGs8fBHb1Ynb2IT+QoCu6T9Jru/QJciGTHqt1QDr+FxggeXI1qh4Q/8AgV0aHopctytpffGw/MVYW/QK9blbn3sg/Ns0By2DgzZGrJHeAcH4kHHwNdK6D8Ys7NlZeGKZB/bPca3HmoeMKh57jFXcHo4uzzEa+1m/lU1aW3o2l+1Io9iE/MlaA2i16fWbKC7GNj9nBbHvTIq4seP20u0cqsfAHf4c61S19HSD13dveqj5An51d2nQ+2jwVjTI3ywLEHxGsnB9lAXy3Cn7Q+NZAaix2Cjnk1JRABgbCgPqlKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUB4RXw0KnmoPuFZKUBg+iR/cX4UNon3B8Kz0oCBLwW2b1reFvbGp/MVh/zZsv8Aolv/ANyn9KtaUBVjo5ZjlaW//cp/SpEfC4F9WGIexFH5CplKAxpCo5KB7BX3ivaUB5ivaUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgP/9k=" alt="BMW 3 Series" class="car-image">
+
+    <p><strong>Variants:</strong></p>
+    <ul class="styled-list">
+      <li>330Li M Sport</li>
+      <li>320Ld Luxury Line</li>
+      <li>330i M Sport Pro</li>
+    </ul>
+
+    <p><strong>Engine Options:</strong> 2.0L Turbo Petrol, 2.0L Turbo Diesel</p>
+
+    <button class="btn" onclick="toggleFeatures()">Show/Hide Features</button>
+
+    <div id="features">
+      <p><strong>Key Features:</strong></p>
+      <ul class="styled-list">
+        <li>2.0L TwinPower Turbo Engine (Petrol/Diesel)</li>
+        <li>8-Speed Steptronic Automatic Transmission</li>
+        <li>Rear-Wheel Drive</li>
+        <li>BMW Kidney Grille with Active Air Flaps</li>
+        <li>LED Headlights with Cornering Function</li>
+        <li>18-inch Alloy Wheels</li>
+        <li>Panoramic Glass Sunroof</li>
+        <li>Sport Seats with Sensatec Upholstery</li>
+        <li>Digital Key with Smartphone Integration</li>
+        <li>BMW Curved Display with 12.3” Digital Instrument Cluster</li>
+        <li>14.9” Touchscreen with BMW Operating System 8</li>
+        <li>Gesture Control & Voice Assistant</li>
+        <li>Wireless Apple CarPlay and Android Auto</li>
+        <li>HiFi Loudspeaker System</li>
+        <li>Ambient Lighting with 6 Color Themes</li>
+        <li>Dual-Zone Climate Control</li>
+        <li>Powered Front Seats with Memory Function</li>
+        <li>Rear AC Vents</li>
+        <li>Rear View Camera with Parking Sensors</li>
+        <li>Reversing Assistant</li>
+        <li>Launch Control (in 330i variant)</li>
+        <li>Drive Modes: Eco Pro, Comfort, Sport</li>
+        <li>ABS with Brake Assist</li>
+        <li>Cornering Brake Control (CBC)</li>
+        <li>Dynamic Traction Control (DTC)</li>
+        <li>Six Airbags</li>
+        <li>Run-Flat Tyres with Tyre Pressure Monitoring</li>
+        <li>Rain-Sensing Wipers</li>
+        <li>Keyless Entry & Push Button Start</li>
+        <li>Cruise Control with Braking Function</li>
+      </ul>
+    </div>
+
+    <p><strong>Price Range:</strong><b> ₹72 lakh – ₹77 lakh (ex-showroom, India)</b></p>
+  </div>
+
+  <script>
+    function toggleFeatures() {
+      const features = document.getElementById('features');
+      features.style.display = features.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
