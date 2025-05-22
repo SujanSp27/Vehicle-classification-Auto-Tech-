@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TVS Ronin</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f0f0f0;
+      padding: 20px;
+    }
+    .container {
+      background: #ebe4e4;
+      color: #0b0b0b;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 32px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+    .bike-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      background-color: #ccc;
+      margin-bottom: 25px;
+    }
+    .styled-list {
+      padding-left: 25px;
+      border-left: 4px solid #e81515;
+    }
+    .styled-list li {
+      position: relative;
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+    .styled-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background-color: #e81515;
+      border-radius: 50%;
+    }
+    .btn {
+      background-color: #e81515;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #features {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TVS Ronin</h1>
+    <img src="https://images.tractorjunction.com/1_Discover_Ronin_0fdb3ed1eb.png?format=webp&quality=40" alt="TVS Ronin" class="bike-image" />
+    <p><strong>Variants:</strong></p>
+    <ul class="styled-list">
+      <li>Ronin SS</li>
+      <li>Ronin DS</li>
+      <li>Ronin TD</li>
+    </ul>
+
+    <p><strong>Engine:</strong> 225.9cc, oil-cooled, single-cylinder</p>
+    <p><strong>Power:</strong> 20.4 PS @ 7750 rpm</p>
+    <p><strong>Torque:</strong> 19.93 Nm @ 3750 rpm</p>
+
+    <button class="btn" onclick="toggleFeatures()">Show/Hide Features</button>
+
+    <div id="features">
+      <p><strong>Key Features:</strong></p>
+      <ul class="styled-list">
+        <li>Urban & Rain Ride Modes</li>
+        <li>Asymmetrical LCD Instrument Cluster</li>
+        <li>Bluetooth SmartXonnect with Voice Assist</li>
+        <li>Slipper Clutch</li>
+        <li>USD Front Forks</li>
+        <li>LED Headlamp & Tail Lamp</li>
+        <li>Dual Channel ABS</li>
+      </ul>
+    </div>
+
+    <p><strong>Price Range:</strong> ₹1.49 lakh – ₹1.73 lakh (ex-showroom, India)</p>
+  </div>
+
+  <script>
+    function toggleFeatures() {
+      const features = document.getElementById('features');
+      features.style.display = features.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
