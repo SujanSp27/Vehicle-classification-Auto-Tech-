@@ -1,0 +1,154 @@
+header {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background:  #343a40;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  width: 70%;
+  max-width: 500px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.brand-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.brand-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.brand-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background:  #343a40;
+  color: white;
+}
+/* Style container holding the filters */
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Style for search input */
+#brandSearch {
+  padding: 12px 18px;
+  font-size: 18px;
+  width: 280px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+#brandSearch:focus {
+  border-color: #343a40;
+  outline: none;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Style for dropdown */
+#typeFilter {
+  padding: 12px 18px;
+  font-size: 18px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  min-width: 180px;
+}
+
+#typeFilter:focus {
+  border-color: #343a40;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
