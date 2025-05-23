@@ -3,68 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BMW Motorcycles - VehicleWale</title>
+    <title>Brand Vehicles - BMW</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #090909;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         header {
-            background-color: #1e1e2f;
-            color: white;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 16px;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0%;
-            height: 2px;
-            background: #ffcc00;
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
+      background-color: #1e1e2f;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #ffcc00;
+      bottom: -5px;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
 
         .brand-banner {
             width: 100%;
             height: 300px;
-            background: url('https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20200723114011_BMW-Motorrad.jpg') center/cover no-repeat;
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -77,11 +70,14 @@
         .vehicle-list {
             display: flex;
             flex-direction: column;
+            /* Stack items vertically */
             gap: 20px;
             padding: 20px;
-            max-height: 800px;
+            height: 500px;
+            /* or any desired height */
             overflow-y: auto;
             background-color: #f4f4f4;
+            /* optional, just for contrast */
         }
 
         .vehicle-card {
@@ -89,6 +85,7 @@
             border-radius: 10px;
             overflow: hidden;
             height: 120px;
+            /* optional fixed height for card */
             display: flex;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease;
@@ -99,7 +96,7 @@
         }
 
         .vehicle-card img {
-            width: 180px;
+            width: 120px;
             height: 100%;
             object-fit: cover;
         }
@@ -123,84 +120,90 @@
         }
 
         footer {
-            background-color: #1e1e2f;
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-            font-size: 14px;
-            margin-top: auto;
-        }
+      background-color: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 14px;
+      margin-top: auto;
+      user-select: none;
+    }
 
-        @media (max-width: 600px) {
-            header {
-                padding: 15px 20px;
-            }
-            .logo {
-                font-size: 22px;
-            }
-            nav a {
-                margin: 0 10px;
-                font-size: 14px;
-            }
-            main {
-                padding: 30px 15px;
-            }
-        }
+    @media (max-width: 600px) {
+      header {
+        padding: 15px 20px;
+      }
+      .logo {
+        font-size: 22px;
+      }
+      nav a {
+        margin: 0 10px;
+        font-size: 14px;
+      }
+      main {
+        padding: 30px 15px;
+      }
+    }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="logo">VehicleWale</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="filter.html">Filter</a>
-            <a href="contact.html">Contact</a>
-            <a href="buy.html">Buy</a>
-        </nav>
-    </header>
+    <div class="logo">VehicleWale</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="filter.html">Filter</a>
+      <a href="contact.html">Contact</a>
+      <a href="buy.html">Buy</a>
+    </nav>
+  </header>
 
-    <div class="brand-banner">
-        BMW Motorrad
+    <!-- Brand Banner -->
+    <div class="brand-banner" style="background-image: url('images/brand-banner.jpg');">
+       BMW
     </div>
 
+    <!-- Vehicle Listing -->
     <div class="vehicle-list">
         <div class="vehicle-card">
-            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/102709/s-1000-rr-right-front-three-quarter.jpeg?isig=0&q=80" alt="BMW S 1000 RR">
+            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/126521/g-310-r-left-side-view-4.png?isig=0&q=80" alt="Vehicle 1">
             <div class="vehicle-info">
-                <h3>BMW S 1000 RR</h3>
-                <p>Starting at ₹20.25 Lakh</p>
+                <h3>G 310 R</h3>
+                <p>Price: ₹2.85 lakh</p>
             </div>
         </div>
 
         <div class="vehicle-card">
-            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/47051/bmw-r-1250-gs-right-front-three-quarter0.jpeg?q=80" alt="BMW R 1250 GS">
+            <img src=https://cdn.bikedekho.com/processedimages/bmw/g-310-gs/source/g-310-gs675006dc51ebf.jpg?imwidth=360&impolicy=resize" alt="Vehicle 2">
             <div class="vehicle-info">
-                <h3>BMW R 1250 GS</h3>
-                <p>Starting at ₹20.45 Lakh</p>
+                <h3>G 310 GS</h3>
+                <p>Price: ₹3.20 lakh</p>
             </div>
         </div>
 
         <div class="vehicle-card">
-            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/48197/f-900-r-right-front-three-quarter.jpeg?q=80" alt="BMW F 900 R">
+            <img src="https://cdn.bikedekho.com/processedimages/bmw/f-450-gs/source/f-450-gs672a292136972.jpg?tr=w-264" alt="Vehicle 2">
             <div class="vehicle-info">
-                <h3>BMW F 900 R</h3>
-                <p>Starting at ₹8.95 Lakh</p>
+                <h3>F 450 GS (Upcoming)</h3>
+                <p>Expected Price: ₹5 lakh</p>
             </div>
         </div>
 
         <div class="vehicle-card">
-            <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/49051/g-310-r-right-front-three-quarter.jpeg?q=80" alt="BMW G 310 R">
+            <img src="https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-gs-trophy-1676369938888.png" alt="Vehicle 2">
             <div class="vehicle-info">
-                <h3>BMW G 310 R</h3>
-                <p>Starting at ₹2.85 Lakh</p>
+                <h3>R 1250 GS</h3>
+                <p>Price: ₹20.45 lakh</p>
             </div>
         </div>
+
+        <!-- Add more vehicle cards as needed -->
     </div>
-
+    
     <footer>
-        &copy; 2025 VehicleWale. All rights reserved.
-    </footer>
+    &copy; 2025 VehicleWale. All rights reserved.
+  </footer>
+
 </body>
 
 </html>

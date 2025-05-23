@@ -67,35 +67,90 @@
         }
 
         .brand-card {
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 204, 0, 0.1);
             border-radius: 16px;
+            padding: 30px 20px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
-            height: 200px;
+            min-height: 220px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-decoration: none;
             position: relative;
             overflow: hidden;
-            padding: 0;
-            margin: 0;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .brand-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.15) 0%, rgba(255, 204, 0, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .brand-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 204, 0, 0.1),
+                transparent
+            );
+            transition: 0.5s;
         }
 
         .brand-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-8px);
+            border-color: rgba(255, 204, 0, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .brand-card:hover::before {
+            opacity: 1;
+        }
+
+        .brand-card:hover::after {
+            left: 100%;
+        }
+
+        .brand-card:hover .brand-logo {
+            animation: float 3s ease-in-out infinite;
         }
 
         .brand-logo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+            width: 160px;
+            height: 110px;
+            margin: 0 auto 20px;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+            filter: brightness(1.1);
+            position: relative;
+            z-index: 1;
         }
 
-        .brand-info, .brand-name, .brand-specialty, .brand-models {
-            display: none;
+        .brand-info {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-card:hover .brand-info {
+            transform: scale(1.05);
         }
 
         .brand-name {
@@ -429,16 +484,28 @@
             </div>
             <div class="brands-grid">
                 <a href="https://www.bmw.com" target="_blank" class="brand-card">
-                    <img src="bmw.jpg" alt="BMW" class="brand-logo">
+                    <img src="https://wallpaperaccess.com/full/1124992.jpg" alt="BMW" class="brand-logo">
+                    <h3 class="brand-name">BMW</h3>
+                    <p class="brand-specialty">Luxury Performance</p>
+                    <p class="brand-models">15 Models</p>
                 </a>
                 <a href="https://www.mercedes-benz.com" target="_blank" class="brand-card">
                     <img src="https://th.bing.com/th/id/R.b92bf19612e524ac1f9d5e998770eba7?rik=YHg0unj%2fGLXqRQ&riu=http%3a%2f%2fwww.car-brand-names.com%2fwp-content%2fuploads%2f2015%2f05%2fMercedes-symbol.jpg&ehk=VoRFHVAfoEX5td57bWcV%2b7%2fYJ3SzZLDH6VVMGjW9Ngs%3d&risl=&pid=ImgRaw&r=0" alt="Mercedes" class="brand-logo">
+                    <h3 class="brand-name">Mercedes-Benz</h3>
+                    <p class="brand-specialty">Premium Luxury</p>
+                    <p class="brand-models">20 Models</p>
                 </a>
                 <a href="https://www.toyota.com" target="_blank" class="brand-card">
                     <img src="https://th.bing.com/th/id/OIP.MWuEuGf5gKjv4Fcm14FEvAHaHa?rs=1&pid=ImgDetMain" alt="Toyota" class="brand-logo">
+                    <h3 class="brand-name">Toyota</h3>
+                    <p class="brand-specialty">Reliability & Innovation</p>
+                    <p class="brand-models">18 Models</p>
                 </a>
                 <a href="https://www.honda.com" target="_blank" class="brand-card">
-                    <img src="https://static.vecteezy.com/system/resources/previews/020/500/434/original/honda-logo-brand-symbol-with-name-white-design-japan-car-automobile-illustration-with-black-background-free-vector.jpg" alt="Honda" class="brand-logo">
+                    <img src="https://www.car-logos.org/wp-content/uploads/2011/09/honda.png" alt="Honda" class="brand-logo">
+                    <h3 class="brand-name">Honda</h3>
+                    <p class="brand-specialty">Quality & Performance</p>
+                    <p class="brand-models">12 Models</p>
                 </a>
             </div>
         </section>
@@ -455,16 +522,22 @@
             </div>
             <div class="brands-grid">
                 <a href="https://www.royalenfield.com" target="_blank" class="brand-card">
-                    <img src="re.jpg" alt="Royal Enfield" class="brand-logo">
+                    <img src="https://www.logo-designer.co/wp-content/uploads/2021/04/2021-royal-enfield-new-logo-design-icon.png" alt="Royal Enfield" class="brand-logo">
+                    <h3 class="brand-name">Royal Enfield</h3>
+                    <p class="brand-specialty">Classic Heritage</p>
+                    <p class="brand-models">8 Models</p>
                 </a>
                 <a href="https://www.honda2wheelers.com" target="_blank" class="brand-card">
-                    <img src="https://static.vecteezy.com/system/resources/previews/020/500/434/original/honda-logo-brand-symbol-with-name-white-design-japan-car-automobile-illustration-with-black-background-free-vector.jpg" alt="Honda" class="brand-logo">
+                    <img src="https://www.seekpng.com/png/detail/70-701896_honda-logo-png-honda-2-wheelers-logo-png.png" alt="Honda" class="brand-logo">
+                    <h3 class="brand-name">Honda</h3>
+                    <p class="brand-specialty">Advanced Technology</p>
+                    <p class="brand-models">12 Models</p>
                 </a>
                 <a href="https://www.yamaha-motor.com" target="_blank" class="brand-card">
-                    <img src="yamaha.png" alt="Yamaha" class="brand-logo">
-                </a>
-                <a href="https://www.tvsmotor.com/" target="_blank" class="brand-card">
-                    <img src="tvs.jpg" alt="tvs" class="brand-logo">
+                    <img src="https://www.car-logos.org/wp-content/uploads/2011/09/yamaha.png" alt="Yamaha" class="brand-logo">
+                    <h3 class="brand-name">Yamaha</h3>
+                    <p class="brand-specialty">Sport Performance</p>
+                    <p class="brand-models">10 Models</p>
                 </a>
             </div>
         </section>
@@ -481,16 +554,16 @@
             </div>
             <div class="brands-grid">
                 <a href="https://www.tatamotors.com" target="_blank" class="brand-card">
-                    <img src="https://static.vecteezy.com/system/resources/previews/020/336/733/large_2x/tata-logo-tata-icon-free-free-vector.jpg" alt="Tata" class="brand-logo">
+                    <img src="https://www.car-logos.org/wp-content/uploads/2011/09/tata.png" alt="Tata" class="brand-logo">
+                    <h3 class="brand-name">Tata</h3>
+                    <p class="brand-specialty">Commercial Solutions</p>
+                    <p class="brand-models">10 Models</p>
                 </a>
                 <a href="https://www.volvotrucks.com" target="_blank" class="brand-card">
-                    <img src="https://th.bing.com/th/id/R.ef3f8e53b2a255190a32016b2d36d30d?rik=cNXpkBEu1v%2bF%2fw&riu=http%3a%2f%2fwww.car-brand-names.com%2fwp-content%2fuploads%2f2015%2f12%2fVolvo-Symbol-2.jpg&ehk=j07pbrLVPg4NymK%2bWu9m%2bQYy7PujlYANzB5vNouCJAw%3d&risl=&pid=ImgRaw&r=0" alt="Volvo" class="brand-logo">
-                </a>
-                <a href="https://www.mantruckandbusindia.com/en/homepage.html" target="_blank" class="brand-card">
-                    <img src="https://th.bing.com/th/id/OIP.nTQVqPsELf7zV6P3uTIx-wHaFX?rs=1&pid=ImgDetMain" alt="man" class="brand-logo">
-                </a>
-                <a href="https://www.eicher.in/" target="_blank" class="brand-card">
-                    <img src="https://img-new.cgtrader.com/items/828064/de37e0c3fa/eicher-logo-3d-model-obj-mtl-3ds-fbx-c4d-lwo-lw-lws-ma-mb.jpg" alt="eicher" class="brand-logo">
+                    <img src="https://www.car-logos.org/wp-content/uploads/2011/09/volvo.png" alt="Volvo" class="brand-logo">
+                    <h3 class="brand-name">Volvo</h3>
+                    <p class="brand-specialty">Heavy Duty</p>
+                    <p class="brand-models">6 Models</p>
                 </a>
             </div>
         </section>
@@ -507,16 +580,16 @@
             </div>
             <div class="brands-grid">
                 <a href="https://www.ashokleyland.com/buses" target="_blank" class="brand-card">
-                    <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/ashok-leyland-quardon.jpg" alt="Ashok Leyland" class="brand-logo">
+                    <img src="https://www.car-logos.org/wp-content/uploads/2011/09/ashok-leyland.png" alt="Ashok Leyland" class="brand-logo">
+                    <h3 class="brand-name">Ashok Leyland</h3>
+                    <p class="brand-specialty">Commercial Transport</p>
+                    <p class="brand-models">5 Models</p>
                 </a>
                 <a href="https://www.bharatbenz.com/buses" target="_blank" class="brand-card">
-                    <img src="https://th.bing.com/th/id/OIP.0dwAyeDK5pi9fp_CfZ8j0AHaFk?rs=1&pid=ImgDetMain" alt="Bharat Benz" class="brand-logo">
-                </a>
-                <a href="https://www.volvotrucks.com" target="_blank" class="brand-card">
-                    <img src="https://th.bing.com/th/id/R.ef3f8e53b2a255190a32016b2d36d30d?rik=cNXpkBEu1v%2bF%2fw&riu=http%3a%2f%2fwww.car-brand-names.com%2fwp-content%2fuploads%2f2015%2f12%2fVolvo-Symbol-2.jpg&ehk=j07pbrLVPg4NymK%2bWu9m%2bQYy7PujlYANzB5vNouCJAw%3d&risl=&pid=ImgRaw&r=0" alt="Volvo" class="brand-logo">
-                </a>
-                <a href="https://forcemotors.com/" target="_blank" class="brand-card">
-                    <img src="https://cdn.dribbble.com/users/2321818/screenshots/6785488/force_logo.png" alt="force" class="brand-logo">
+                    <img src="https://www.car-logos.org/wp-content/uploads/2011/09/bharat-benz.png" alt="Bharat Benz" class="brand-logo">
+                    <h3 class="brand-name">Bharat Benz</h3>
+                    <p class="brand-specialty">Premium Transport</p>
+                    <p class="brand-models">4 Models</p>
                 </a>
             </div>
         </section>
