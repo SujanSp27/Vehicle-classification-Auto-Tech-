@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Land Rover Defender Details</title>
+  <style>
+    /* CSS retained without changes */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+
+    .container {
+      background: #ebe4e4;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #0b0b0b;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .car-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      filter: grayscale(10%) brightness(90%);
+    }
+
+    p {
+      color: #0c0101;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .styled-list {
+      padding-left: 25px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-left: 4px solid #e81515;
+    }
+
+    .styled-list li {
+      color: #0c0101;
+      font-size: 17px;
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .styled-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background-color: #e81515;
+      border-radius: 50%;
+    }
+
+    .btn {
+      background-color: #e81515;
+      color: #efe8e8;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #features {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Land Rover Defender</h1>
+
+    <img src="data:image/jpeg;base64,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" alt="Land Rover Defender" class="car-image">
+
+    <p><strong>Variants:</strong></p>
+    <ul class="styled-list">
+      <li>Defender 90 (3-Door)</li>
+      <li>Defender 110 (5-Door)</li>
+      <li>Defender 130 (Extended 8-Seater)</li>
+    </ul>
+
+    <p><strong>Engine Options:</strong> 2.0L Turbo Petrol, 3.0L Mild-Hybrid Petrol, 3.0L Diesel, 5.0L Supercharged V8 (Top variant)</p>
+
+    <button class="btn" onclick="toggleFeatures()">Show/Hide Features</button>
+
+    <div id="features">
+      <p><strong>Key Features:</strong></p>
+      <ul class="styled-list">
+        <li>8-Speed Automatic Transmission</li>
+        <li>All-Wheel Drive with Terrain Response 2</li>
+        <li>Electronic Air Suspension</li>
+        <li>Matrix LED Headlights</li>
+        <li>20- to 22-inch Alloy Wheels (depending on variant)</li>
+        <li>Electric Adjustable and Heated Seats</li>
+        <li>Windsor Leather or Fabric Upholstery</li>
+        <li>Pivi Pro 11.4” Touchscreen Infotainment</li>
+        <li>Meridian Sound System</li>
+        <li>Apple CarPlay & Android Auto (Wireless)</li>
+        <li>ClearSight Interior Rear View Mirror</li>
+        <li>360° Surround Camera with 3D View</li>
+        <li>Wade Sensing and Off-road Drive Modes</li>
+        <li>Panoramic Sunroof (Fixed or Sliding)</li>
+        <li>Wireless Device Charging</li>
+        <li>12.3” Digital Driver Display</li>
+        <li>Adaptive Cruise Control</li>
+        <li>Lane Keep Assist</li>
+        <li>Blind Spot Assist</li>
+        <li>Emergency Braking</li>
+        <li>Six to Eight Airbags (based on variant)</li>
+        <li>Keyless Entry and Push Button Start</li>
+        <li>All-Terrain Progress Control</li>
+        <li>Optional Roof Rack & Side-Mounted Gear Box</li>
+        <li>Off-Road Tyres with Full-Size Spare</li>
+      </ul>
+    </div>
+
+    <p><strong>Price Range:</strong><b> ₹95 lakh – ₹2.3 crore (ex-showroom, India)</b></p>
+  </div>
+
+  <script>
+    function toggleFeatures() {
+      const features = document.getElementById('features');
+      features.style.display = features.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>

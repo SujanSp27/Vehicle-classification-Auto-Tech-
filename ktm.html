@@ -144,6 +144,16 @@
         padding: 30px 15px;
       }
     }
+    a {
+  color: inherit; /* Ensures the link inherits the same font color from its parent (container) */
+  text-decoration: none; /* Removes the underline from the link */
+  font-weight: normal; /* Keeps the font weight consistent */
+}
+
+a:hover {
+  color: inherit; /* On hover, the link color stays the same */
+  text-decoration: none; /* Ensures no underline on hover */
+}
     </style>
 </head>
 
@@ -165,6 +175,7 @@
 
     <!-- Vehicle Listing -->
     <div class="vehicle-list">
+      <a href="ktm1.html"> 
         <div class="vehicle-card">
             <img src="https://5.imimg.com/data5/LR/WE/MY-5372525/ktm-200-duke-2018-500x500.png" alt="Vehicle 1">
             <div class="vehicle-info">
@@ -172,30 +183,34 @@
                 <p>Price: ₹2.06 lakh</p>
             </div>
         </div>
+        </a>
 
-        <div class="vehicle-card">
+        <a href="ktm2.html"> <div class="vehicle-card">
             <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/ktm-duke-250-standard1728459958743.jpg?q=80" alt="Vehicle 2">
             <div class="vehicle-info">
                 <h3>250 Duke</h3>
                 <p>Price: ₹2.28 lakh</p>
             </div>
         </div>
+        </a>
 
-        <div class="vehicle-card">
+        <a href="ktm3.html"> <div class="vehicle-card">
             <img src="https://cdn.bikedekho.com/processedimages/ktm/2021-390-duke/640X309/2021-390-duke681857d8f4118.jpg?imwidth=360&impolicy=resize" alt="Vehicle 2">
             <div class="vehicle-info">
                 <h3>390 Duke</h3>
                 <p>Price: ₹2.96 lakh</p>
             </div>
         </div>
+        </a>
 
-        <div class="vehicle-card">
+        <a href="ktm4.html"> <div class="vehicle-card">
             <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/ktm-390-adventure-2025-standard1738767911552.jpg?v=1738767911740&q=80" alt="Vehicle 2">
             <div class="vehicle-info">
                 <h3>390 Adventure</h3>
                 <p>Price: ₹3.68 lakh</p>
             </div>
         </div>
+        </a>
 
         <!-- Add more vehicle cards as needed -->
     </div>
