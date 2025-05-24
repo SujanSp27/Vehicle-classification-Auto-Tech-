@@ -152,6 +152,16 @@
                 padding: 30px 15px;
             }
         }
+        a {
+  color: inherit; /* Ensures the link inherits the same font color from its parent (container) */
+  text-decoration: none; /* Removes the underline from the link */
+  font-weight: normal; /* Keeps the font weight consistent */
+}
+
+a:hover {
+  color: inherit; /* On hover, the link color stays the same */
+  text-decoration: none; /* Ensures no underline on hover */
+}
     </style>
 </head>
 
@@ -171,7 +181,7 @@
         Yamaha </div>
 
     <!-- Vehicle Listing -->
-    <div class="vehicle-list">
+    <a href="yamaha1.html"><div class="vehicle-list">
         <div class="vehicle-card">
             <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/49494/fz-right-front-three-quarter-2.png?isig=0" alt="Vehicle 1">
             <div class="vehicle-info">
@@ -179,30 +189,34 @@
                 <p>Price: ₹1.17 Lakh (Ex-showroom, New Delhi)</p>
             </div>
         </div>
+        </a>
 
-        <div class="vehicle-card">
+        <a href="yamaha2.html"><div class="vehicle-card">
             <img src="https://www.yamaha-motor-india.com/theme/v4/images/webp_images/fz_series_all/fzs-fi-new/color/color-02.webp" alt="Vehicle 2">
             <div class="vehicle-info">
                 <h3>Yamaha FZS-FI V3</h3>
                 <p>Price: ₹1.22 Lakh (Ex-showroom, New Delhi)</p>
             </div>
         </div>
+        </a>
 
-        <div class="vehicle-card">
+        <a href="yamaha3.html"><div class="vehicle-card">
             <img src="https://shop.yamaha-motor-india.com/cdn/shop/files/cyan_2392ee82-a84c-4fd7-bceb-7493b4770d18.png?v=1712567740" alt="Vehicle 2">
             <div class="vehicle-info">
                 <h3>Yamaha MT-15</h3>
                 <p>Price: ₹1.60 Lakh (Ex-showroom, New Delhi)</p>
             </div>
         </div>
+        </a>
 
-        <div class="vehicle-card">
+        <a href="yamaha3.html"><div class="vehicle-card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT--4RNLJZN2Kmt38jbRGjWG2Gffbz7UiX01Q&s" alt="Vehicle 2">
             <div class="vehicle-info">
                 <h3>Yamaha R15 V4</h3>
                 <p>Price: ₹2.43 Lakh</p>
             </div>
         </div>
+        </a>
 
         <!-- Add more vehicle cards as needed -->
     </div>

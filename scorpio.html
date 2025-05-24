@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mahindra Scorpio N (2025) Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+
+    .container {
+      background: #ebe4e4;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #0b0b0b;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .car-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      filter: grayscale(10%) brightness(90%);
+    }
+
+    p {
+      color: #0c0101;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .styled-list {
+      padding-left: 25px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-left: 4px solid #e81515;
+    }
+
+    .styled-list li {
+      color: #0c0101;
+      font-size: 17px;
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .styled-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background-color: #e81515;
+      border-radius: 50%;
+    }
+
+    .btn {
+      background-color: #e81515;
+      color: #efe8e8;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #features {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Mahindra Scorpio N (2025)</h1>
+
+    <img src="https://imgd.aeplcdn.com/370x208/n/cw/ec/31883/scorpio-exterior-right-front-three-quarter-2.jpeg?q=80" alt="Mahindra Scorpio N" class="car-image">
+
+    <p><strong>Variants:</strong></p>
+    <ul class="styled-list">
+      <li>Z2</li>
+      <li>Z4</li>
+      <li>Z6</li>
+      <li>Z8</li>
+      <li>Z8L</li>
+      <li>Z8L 4x4</li>
+      <li>Z8L 4x4 AT</li>
+      <li>Carbon Edition</li>
+    </ul>
+
+    <p><strong>Engine Options:</strong> 2.0L Turbo Petrol (203hp), 2.2L Turbo Diesel (175hp)</p>
+
+    <button class="btn" onclick="toggleFeatures()">Show/Hide Features</button>
+
+    <div id="features">
+      <p><strong>Key Features:</strong></p>
+      <ul class="styled-list">
+        <li>8-inch Touchscreen Infotainment System</li>
+        <li>Wireless Android Auto & Apple CarPlay</li>
+        <li>12-Speaker Sony Sound System</li>
+        <li>Dual-Zone Climate Control</li>
+        <li>Ventilated Front Seats</li>
+        <li>Sunroof</li>
+        <li>Steering-Mounted Controls</li>
+        <li>Leather-Wrapped Steering Wheel</li>
+        <li>Leather-Wrapped Gear Shift Lever</li>
+        <li>6 Airbags</li>
+        <li>Electronic Stability Control (ESC)</li>
+        <li>Hill Hold Control</li>
+        <li>Hill Descent Control</li>
+        <li>Tyre Pressure Monitoring System (TPMS)</li>
+        <li>Auto-Dimming IRVM</li>
+        <li>Parking Sensors</li>
+        <li>All 4 Disc Brakes</li>
+      </ul>
+    </div>
+
+    <p><strong>Price Range:</strong><b> ₹19.19 lakh – ₹24.89 lakh (ex-showroom, India)</b></p>
+  </div>
+
+  <script>
+    function toggleFeatures() {
+      const features = document.getElementById('features');
+      features.style.display = features.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
