@@ -79,10 +79,6 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 This project is open source. Please see the [LICENSE](LICENSE) file for more information.
 
-## 👤 Author
-
-**Sujan Sp**
-- GitHub: [@SujanSp27](https://github.com/SujanSp27)
 
 ## 📞 Support
 
@@ -90,4 +86,3 @@ For questions or issues, please open a [GitHub Issue](https://github.com/SujanSp
 
 ---
 
-**Last Updated:** May 7, 2026
